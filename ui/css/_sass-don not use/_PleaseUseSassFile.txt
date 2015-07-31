@@ -1,1 +1,0 @@
-When editing the css Please use sass file and create backups. 
