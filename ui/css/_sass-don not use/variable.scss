@@ -1,0 +1,81 @@
+/* MAIN COLORS */
+$themeGreen:#566c11;
+$warmGrey: #505050;
+$warmBrown: #897966;
+
+
+@mixin border_radious($b_rad){
+       -webkit-border-radius:$b_rad;
+       -moz-border-radius-topleft:$b_rad;
+       border-radius:$b_rad;
+
+}
+
+@mixin border_radious_top($b_rad_top){
+	-webkit-border-top-left-radius:$b_rad_top;
+	-webkit-border-top-right-radius: $b_rad_top;
+	-moz-border-radius-topleft: $b_rad_top;
+	-moz-border-radius-topright: $b_rad_top;
+	border-top-left-radius: $b_rad_top;
+	border-top-right-radius: $b_rad_top;
+}
+
+@mixin border_radious_bottom($b_rad_bottom){
+	-webkit-border-bottom-right-radius: $b_rad_bottom;
+	-webkit-border-bottom-left-radius: $b_rad_bottom;
+	-moz-border-radius-bottomright: $b_rad_bottom;
+	-moz-border-radius-bottomleft: $b_rad_bottom;
+	border-bottom-right-radius: $b_rad_bottom;
+	border-bottom-left-radius: $b_rad_bottom;
+
+}
+
+//@include _transition(all,.2s,ease-in);
+
+@mixin _transition($property,$duration,$timingfunction){
+	-moz-transition: $property $duration $timingfunction;
+	-o-transition: $property $duration $timingfunction;
+	-webkit-transition: $property $duration $timingfunction;
+	transition: $property $duration $timingfunction;
+}
+
+@mixin _boxshadowTobBottom($color){
+	 moz-box-shadow:    inset  0px 17px 7px -14px $color, 
+                        inset  0px -17px 7px -14px $color;
+    -webkit-box-shadow: inset  0px 17px 7px -14px $color, 
+                        inset  0px -17px 7px -14px $color;
+     box-shadow:        inset  0px 17px 7px -14px $color, 
+                        inset  0px -17px 7px -14px $color;
+}
+
+@mixin _boxshadowTop($color){
+	moz-box-shadow:    inset  0px 17px 7px -14px $color;
+	-webkit-box-shadow: inset  0px 17px 7px -14px $color; 
+	box-shadow: inset  0px 17px 7px -14px $color;
+}
+
+@mixin _boxshadowbottom($color){
+	-moz-box-shadow: 0 4px 2px -2px $color;
+	-webkit-box-shadow: 0 4px 2px -2px $color;
+	box-shadow:0 4px 2px -2px $color;
+}
+
+
+// Fonts ------------------------
+
+@mixin _font($type){
+
+	font-family: 'open_sans';
+
+	@if  $type == "bold" {
+		font-weight: bold;
+	}
+
+	@if  $type == "medium" {
+		font-weight: normal;
+	}
+
+	@if $type == "light" {
+		font-weight: 200;
+	}
+}
