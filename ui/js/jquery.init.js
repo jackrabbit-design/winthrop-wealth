@@ -24,13 +24,11 @@ jQuery(function($) {
 	});
 	
 
-			 $.stellar({horizontalScrolling: false});
+	$.stellar({horizontalScrolling: false});
 	
 	
-/*
-$('.parallax-window').parallax({imageSrc: '../../ui/images/w.png', zIndex: 1, naturalWidth: 384, naturalHeight: 248});
-	console.log()
-*/
+	//$('#from-blog').owlCarousel();
+
 });
 $(document).scroll(function() {
 	if ($('.block').isOnScreen() === true) {

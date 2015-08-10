@@ -497,10 +497,13 @@ p { font: 200 14px/24px "proxima_nova", sans-serif; margin: 15px 0; }
 
 .wealth-management img{width: 100%; height: auto; min-height: 100%; min-width: 100%; position: relative;}
 
-.from-the-blog{background: #8aad52;}
+.from-the-blog{background: #8aad52; height: 360px; position: relative;}
 
+.from-the-blog .blog-text{ width: 50%;height: auto;float: right;-webkit-box-sizing: border-box;-moz-box-sizing: border-box; box-sizing: border-box;position: absolute;top: 0;left: 0;padding: 0 20px;text-align: right;}
 
+.from-the-blog .blog-text .blog{ display: inline-block; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; max-width: 470px; text-align: left;padding-right: 120px;}
 
+.from-the-blog .blog-photo{width: 50%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; padding-right: 100px; position: absolute; top: 0; right: 0;}
 
 #home-row-one > div > ul > li { padding: 35px 0 35px 43px; display: block; border-top: 1px solid #cccccc; }
 
@@ -1547,7 +1550,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#637a16',endCol
 
 #footer-nav > ul { overflow: hidden; padding: 0; line-height: 18px;}
 
-#footer-nav > ul > li { vertical-align: top; display: inline-block; text-align: left; width: auto; margin-right: 5%; }
+#footer-nav > ul > li { vertical-align: top; display: inline-block; text-align: left; width: auto; margin-right: 8%; }
 
 #footer-nav > ul > li:last-child{margin-right: 0;}
 

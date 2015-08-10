@@ -135,20 +135,23 @@
 	</section>
 	
 	<section class="from-the-blog">
+		<div class="header">
+			
+		</div>
 		<div class="blog-text">
-			<div class="blog">
+			<div class="blog clearfix">
 				<h2>From the Blog</h2>
-				<h4>When is the Best Time to Invest?</h4>
-				<div class="meta">
-					<a href="#economics">Economics</a>
-					<time>July 4th, 2015</time>
-				</div>
-				<p>Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. Vestibulum ante ipsum primis in faucibus orci luctus.Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. </p>
+						<h4>When is the Best Time to Invest?</h4>
+						<div class="meta">
+							<a href="#economics">Economics</a>
+							<time>July 4th, 2015</time>
+						</div>
+						
+						<p>Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. Vestibulum ante ipsum primis in faucibus orci luctus.Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. </p>
 			</div>
 		</div>
-		<div class="blog-photo">
-			<img src=""/>
-		</div>
+		<div class="blog-photo" style="background: url('http://placebear.com/g/1200/400'); "></div>
+
 	</section>
 
 <?php get_footer(); ?>
