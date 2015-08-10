@@ -48,6 +48,7 @@ $(document).scroll(function() {
 	} else {}
 	
 	
+/*
         var nm = $("html").scrollTop();
         var nw = $("body").scrollTop();
         var n = (nm > nw ? nm : nw);
@@ -57,6 +58,7 @@ $(document).scroll(function() {
         $('.animated-hero .people-row-1').css({
             
            });
+*/
 
 });
 
