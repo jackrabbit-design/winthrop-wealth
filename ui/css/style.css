@@ -725,21 +725,21 @@ section.search-page aside .side-blog a.readmore { font-weight: bold; margin: 15p
 
 
 
-section.by-numbers{width: 100%; background: url(../images/what-we-do.jpg) no-repeat center center; padding: 50px 0; }
+section.by-numbers{width: 100%; background: url(../images/what-we-do.jpg) no-repeat center center; padding: 40px 0; }
 
 section.by-numbers h3{color: #fff; font: 24px/30px 'aleo', serif; text-align: center;}
 
-section.by-numbers ul{font-size: 0;}
+section.by-numbers ul{font-size: 0; margin: 30px 0 0 0;}
 
 section.by-numbers ul li{display: inline-block; width: 16.6015625%; vertical-align: top; margin-right: 11.19791666666667%;}
 
 section.by-numbers ul li:last-child{margin-right: 0;}
 
-section.by-numbers ul li div{font: 700 56px 'proxima_nova';}
+section.by-numbers ul li div{font: 700 56px 'proxima_nova'; position: relative;color: #fff;}
 
-section.by-numbers ul li small{font-size: 18px; text-transform: uppercase; position: relative; top: 50%; transform: translateY(-50%);-webkit-transform: translateY(-50%); -moz-transform: translateY(-50%);}
+section.by-numbers ul li small{color: #fff;font-size: 18px; text-transform: uppercase; vertical-align: middle; margin: 0 0 0 5px;}
 
-section.by-numbers ul li p{font-size: 12px; line-height: 14px;}
+section.by-numbers ul li p{margin: 4px 0 0 0;color: #e4ccae; line-height: 16px;}
 /*Our Story*/
 
 
@@ -1982,7 +1982,12 @@ body { font: 16px/150% 'proxima_nova', sans-serif; }
   .column{width: auto; padding: 0; float: none;}
   
   .personal{border-right: none;}
+
   
+
+   section.by-numbers ul li{    display: inline-block; margin: 0 0 14px 0; padding: 0 0 23px 0; width: 45%; border-bottom: 1px solid rgba(255,255,255,.24); text-align: center;;}
+  section.by-numbers ul li:nth-child(even){margin: 0 0 14px 8%;}
+  section.by-numbers ul li:last-child, section.by-numbers ul li:nth-last-child(2){border-bottom: none;}
   }
 /*768*/
 @media screen and (max-width: 742px) { .header-col-two { width: 100%; }
@@ -2033,7 +2038,11 @@ body { font: 16px/150% 'proxima_nova', sans-serif; }
   section.intro p { font-size: 15px; line-height: 25px; }
   main.blog ul { padding: 0 20px; width: auto; margin: 0 auto; }
   main.blog ul li { width: auto; display: block; float: none !important; }
-  main.blog ul li img { width: 100%; height: auto; } }
+  main.blog ul li img { width: 100%; height: auto; } 
+section.by-numbers ul li{display: block; margin: 0 auto 14px; padding: 0 0 23px 0; width: 90%; border-bottom: 1px solid rgba(255,255,255,.24); text-align: center;;}
+  
+  section.by-numbers ul li:nth-last-child(2){border-bottom: 1px solid rgba(255,255,255,.24); }
+}
 /*480*/
 /*JS*/
 /* CSS Styles that are needed by jScrollPane for it to operate correctly.  Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane may not operate correctly without them. */
