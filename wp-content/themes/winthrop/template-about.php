@@ -81,23 +81,23 @@ get_header(); the_post(); ?>
 </section>
 <section class="by-numbers">
 	<div class="wrapper">
-		<h2>Winthrop By the Numbers</h2>
+		<h3>Winthrop By the Numbers</h3>
 		<ul>
 			<li>
 				<div>1985</div>
-				<span>Founded by Earl and Mark Winthrop</span>
+				<p>Founded by Earl and Mark Winthrop</p>
 			</li>
 			<li>
 				<div>$1.3<small>BILLION</small></div>
-				<span>In client assets under managment</span>
+				<p>In client assets under managment</p>
 			</li>
 			<li>
 				<div>99%</div>
-				<span>Client retnention over th last 25+ years</span>
+				<p>Client retnention over th last 25+ years</p>
 			</li>
 			<li>
 				<div>25<small>years</small></div>
-				<span>Assoicate with LPL Financial the nations leading broker to independent advisors</span>
+				<p>Assoicate with LPL Financial the nations leading broker to independent advisors</p>
 			</li>
 		</ul>
 	</div>

@@ -687,9 +687,9 @@ section.main aside .side-blog a { color: #566c11; font-size: 15px; font-family: 
 
 section.main aside .side-blog a.readmore { font-weight: bold; margin: 15px 0px 0px; display: block; }
 
-section.main .philosophy{max-width: 532px; width: 55.416666666667%; margin: 0 5.208333333333% 0 0; display: inline-block;}
+section.main .philosophy{max-width: 532px; width: 55.416666666667%; margin: 0 5.208333333333% 0 0; display: block; float: left;}
 
-section.main .cornerstones{width: 38.4375%; max-width: 369px;display: inline-block;}
+section.main .cornerstones{width: 38.4375%; max-width: 369px;display: block; float: right;}
 
 section.search-page { width: 960px; margin: 25px auto 20px; }
 
@@ -724,6 +724,22 @@ section.search-page aside .side-blog a { color: #566c11; font-size: 15px; font-f
 section.search-page aside .side-blog a.readmore { font-weight: bold; margin: 15px 0px 0px; display: block; }
 
 
+
+section.by-numbers{width: 100%; background: url(../images/what-we-do.jpg) no-repeat center center; padding: 50px 0; }
+
+section.by-numbers h3{color: #fff; font: 24px/30px 'aleo', serif; text-align: center;}
+
+section.by-numbers ul{font-size: 0;}
+
+section.by-numbers ul li{display: inline-block; width: 16.6015625%; vertical-align: top; margin-right: 11.19791666666667%;}
+
+section.by-numbers ul li:last-child{margin-right: 0;}
+
+section.by-numbers ul li div{font: 700 56px 'proxima_nova';}
+
+section.by-numbers ul li small{font-size: 18px; text-transform: uppercase; position: relative; top: 50%; transform: translateY(-50%);-webkit-transform: translateY(-50%); -moz-transform: translateY(-50%);}
+
+section.by-numbers ul li p{font-size: 12px; line-height: 14px;}
 /*Our Story*/
 
 
