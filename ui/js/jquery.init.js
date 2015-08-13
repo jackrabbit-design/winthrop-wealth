@@ -27,6 +27,11 @@ jQuery(function($) {
 	$.stellar({horizontalScrolling: false});
 	
 	
+	$('section.main .cornerstones li').on('click',function(){
+		$(this).toggleClass('active');
+		//alert('all your base are belong to us');
+	});
+
 	//$('#from-blog').owlCarousel();
 
 });
@@ -46,17 +51,27 @@ $(document).scroll(function() {
 	} else {}
 	
 	
-/*
+
+
         var nm = $("html").scrollTop();
         var nw = $("body").scrollTop();
         var n = (nm > nw ? nm : nw);
-        var Offie = $('.animated-hero .people-row-1').offset().top + $('.animated-hero .people-row-1').outerHeight();
-        var nn = n - Offie/2;
-        
-        $('.animated-hero .people-row-1').css({
-            
-           });
-*/
+
+        // $('#element').css({
+        //     'webkitTransform' : 'translate3d(0, ' + n + 'px, 0)',
+        //     'MozTransform'    : 'translate3d(0, ' + n + 'px, 0)',
+        //     'msTransform'     : 'translateY('     + n + 'px)',
+        //     'OTransform'      : 'translate3d(0, ' + n + 'px, 0)',
+        //     'transform'       : 'translate3d(0, ' + n + 'px, 0)',
+        // });
+
+        // if transform3d isn't available, use top over background-position
+        $('.inner-header').css('background-position-y', -Math.ceil(n/4) + 'px');
+
+     
+
+
+
 
 });
 

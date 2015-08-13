@@ -567,8 +567,7 @@ p { font: 200 14px/24px "proxima_nova", sans-serif; margin: 15px 0; }
 
 .inner-header { height: 380px; width: 100%; position: relative; overflow: hidden; }
 
-.inner-header .title-wrap { width: 960px; margin: 0 auto; height: 380px; position: relative; }
-
+/*.inner-header .title-wrap { width: 960px; margin: 0 auto; height: 380px; position: relative; }*/
 .inner-header .title-wrap h1.page-title, .inner-header .title-wrap h2.page-title { 
 	color: #fff; background: rgba(97, 121, 20, 0.9); display: inline-block; font-size: 34px;position: absolute; bottom: 35px; padding: 10px 30px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transfomr: translateX(-50%);}
 
@@ -600,14 +599,13 @@ section.main h2 { font: 34px/41px 'aleo', serif; color: #2f2f2f; margin: 15px 0;
 
 section.main h3 { font: 24px/30px 'aleo', serif; color: #617914; margin: 15px 0; }
 
-section.main h4 { margin: 15px 0; font: bold 18px/24px 'proxima_nova', sans-serif; color: #566C11; text-transform: uppercase; }
+section.main h4 { margin: 15px 0; font: normal 19px/30px 'aleo', sans-serif; color: #505050;}
 
 section.main h5 { margin: 15px 0; font: bold 18px/24px 'proxima_nova', sans-serif; color: #2f2f2f; text-transform: uppercase; }
 
 section.main h6 { font: 16px/18px 'aleo', serif; color: #2f2f2f; margin: 15px 0; }
 
-section.main blockquote{font: 19px/30px 'aleo', serif; border-top: 1px solid #dfe4d0; border-bottom: 1px solid #dfe4d0;  padding: 20px 0;
-}
+section.main blockquote{font: 19px/30px 'aleo', serif; border-top: 1px solid #dfe4d0; border-bottom: 1px solid #dfe4d0;  padding: 20px 5px; color: #505050;}
 
 section.main article hr { margin: 15px 0; background: #E3E3E3; height: 1px; border-color: #E3E3E3; }
 
@@ -689,7 +687,39 @@ section.main aside .side-blog a.readmore { font-weight: bold; margin: 15px 0px 0
 
 section.main .philosophy{max-width: 532px; width: 55.416666666667%; margin: 0 5.208333333333% 0 0; display: block; float: left;}
 
+
+
 section.main .cornerstones{width: 38.4375%; max-width: 369px;display: block; float: right;}
+
+section.main .cornerstones ul{margin: 18px 0 0 2px;}
+
+section.main .cornerstones li{position: relative; padding: 10px 0 20px; cursor: pointer;}
+
+section.main .cornerstones li:before{content: ''; border-right: 1px solid #d9d9d9; height: 100%; position: absolute; z-index: -1;left: 11px;}
+
+section.main .cornerstones li:last-child:before{border-right: none;}
+
+section.main .cornerstones .circle{border: 1px solid #d9d9d9; height: 21px; width: 21px; border-radius: 100%; float: left; margin: 0px 2% 0 0%; background: #fff;}
+
+section.main .cornerstones .circle:before{content: ''; height: 11px; width: 11px; border-radius: 100%; display: block; background: transparent; margin: 5px 5px 5px 5px;}
+
+section.main .cornerstones .circle.active:before{background: #617914;}
+
+section.main .cornerstones h5{  font: 500 18px/24px 'proxima_nova', sans-serif; text-transform: none; margin: 0;}
+
+section.main .cornerstones .content{display: block; float: right;  vertical-align: top;    width: 90%;}
+
+section.main .cornerstones .hidden{border-bottom: 1px solid #D9D9D9; opacity: 0; visibility: hidden; max-height: 0; transition: all .25s ease-in-out;}
+
+section.main .cornerstones li.active .hidden{max-height: 200px; opacity: 1; visibility: visible;}
+
+section.main .cornerstones li.active .circle:before{background: #617914;}
+
+
+
+
+
+
 
 section.search-page { width: 960px; margin: 25px auto 20px; }
 
@@ -725,7 +755,7 @@ section.search-page aside .side-blog a.readmore { font-weight: bold; margin: 15p
 
 
 
-section.by-numbers{width: 100%; background: url(../images/what-we-do.jpg) no-repeat center center; padding: 40px 0; }
+section.by-numbers{width: 100%; background: url(../images/what-we-do.jpg) no-repeat center center; background-size: cover; padding: 40px 0; }
 
 section.by-numbers h3{color: #fff; font: 24px/30px 'aleo', serif; text-align: center;}
 
@@ -740,6 +770,8 @@ section.by-numbers ul li div{font: 700 56px 'proxima_nova'; position: relative;c
 section.by-numbers ul li small{color: #fff;font-size: 18px; text-transform: uppercase; vertical-align: middle; margin: 0 0 0 5px;}
 
 section.by-numbers ul li p{margin: 4px 0 0 0;color: #e4ccae; line-height: 16px;}
+
+
 /*Our Story*/
 
 
@@ -1751,7 +1783,7 @@ body { font: 16px/150% 'proxima_nova', sans-serif; }
   #slider .banner-controls { bottom: 10px; }
   #home-row-one .content { width: 40%; }
   #home-row-one .hm-carousel { width: 55%; }
-  .inner-header .title-wrap h1.page-title, .inner-header .title-wrap h2.page-title { padding: 10px 13px 10px 20px; left: 0; }
+/*  .inner-header .title-wrap h1.page-title, .inner-header .title-wrap h2.page-title { padding: 10px 13px 10px 20px; left: 0; }*/
   section.main { width: auto; padding: 0 20px; }
   section.main article { width: 60.416666667%; }
   section.main aside { width: 30.208333333%; }
@@ -1983,11 +2015,16 @@ body { font: 16px/150% 'proxima_nova', sans-serif; }
   
   .personal{border-right: none;}
 
-  
+	.top-content.wrapper{padding: 0 20px;}
+section.main .cornerstones{max-width: 100%; width: auto; float: none; padding: 0 20px;}
+section.main .philosophy{max-width: 100%; width: auto; float: none;padding: 0 20px;}
 
    section.by-numbers ul li{    display: inline-block; margin: 0 0 14px 0; padding: 0 0 23px 0; width: 45%; border-bottom: 1px solid rgba(255,255,255,.24); text-align: center;;}
   section.by-numbers ul li:nth-child(even){margin: 0 0 14px 8%;}
   section.by-numbers ul li:last-child, section.by-numbers ul li:nth-last-child(2){border-bottom: none;}
+
+	
+
   }
 /*768*/
 @media screen and (max-width: 742px) { .header-col-two { width: 100%; }

@@ -22,54 +22,54 @@ get_header(); the_post(); ?>
 	<div class="cornerstones">
 		<h3>Cornerstones Of Our Business</h3>
 		<ul>
-			<li>
+			<li class="clearfix">
 				<div class="circle"></div>
-				<div class="contnet">
+				<div class="content">
 					<h5>Client-First Approach.</h5>
 					<div class="hidden">
 						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
 					</div>
 				</div>
 			</li>
-			<li>
+			<li class="clearfix">
 				<div class="circle"></div>
-				<div class="contnet">
+				<div class="content">
 					<h5>Client-First Approach.</h5>
 					<div class="hidden">
 						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
 					</div>
 				</div>
 			</li>
-			<li>
+			<li class="clearfix">
 				<div class="circle"></div>
-				<div class="contnet">
+				<div class="content">
 					<h5>Client-First Approach.</h5>
 					<div class="hidden">
 						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
 					</div>
 				</div>
 			</li>
-			<li>
+			<li class="clearfix">
 				<div class="circle"></div>
-				<div class="contnet">
+				<div class="content">
 					<h5>Client-First Approach.</h5>
 					<div class="hidden">
 						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
 					</div>
 				</div>
 			</li>
-			<li>
+			<li class="clearfix">
 				<div class="circle"></div>
-				<div class="contnet">
+				<div class="content">
 					<h5>Client-First Approach.</h5>
 					<div class="hidden">
 						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
 					</div>
 				</div>
 			</li>
-			<li>
+			<li class="clearfix">
 				<div class="circle"></div>
-				<div class="contnet">
+				<div class="content">
 					<h5>Client-First Approach.</h5>
 					<div class="hidden">
 						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
