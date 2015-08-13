@@ -13,13 +13,17 @@
 			    //Images
 			    $imgSrc = get_sub_field('image');
 			    $img = wp_get_attachment_image_src($imgSrc,'hero');
+
+			    $imgM = wp_get_attachment_image_src($imgSrc,'hero-mobile');
 			?>
 			<li>
-				<div class="banner-img" style="background-image:url(<?php echo $img[0]; ?>)"></div>
+				<div class="banner-img" style="background-image:url(<?php echo $img[0]; ?>)">
+					<img src="<?php echo $imgM[0]; ?>"/>
+				</div>
 			
 			    <div class="banner-content">
 			    	<div class="container">
-			    	<div class="banner-pager"></div>
+			    	
 			        	<div class="banner-inner clearfix">
 			               	<h2><?php echo $title; ?></h2>
 			                <?php if($link == 'interior') { ?> 
@@ -28,7 +32,7 @@
 			                <a href="<?php echo $outLink; ?>" target="_blank" class="banner-link">LEARN MORE</a>
 			                <?php } ?>  
 			            </div>
-			            
+			            <div class="banner-pager"></div>
 			        </div>
 			    </div>
 			
@@ -135,22 +139,51 @@
 	</section>
 	
 	<section class="from-the-blog">
-		<div class="header">
-			
-		</div>
-		<div class="blog-text">
-			<div class="blog clearfix">
-				<h2>From the Blog</h2>
-						<h4>When is the Best Time to Invest?</h4>
-						<div class="meta">
-							<a href="#economics">Economics</a>
-							<time>July 4th, 2015</time>
-						</div>
-						
-						<p>Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. Vestibulum ante ipsum primis in faucibus orci luctus.Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. </p>
+
+		<div id="blog-slider">
+			<div>
+				<div class="blog-photo" style="background: url('http://placebear.com/g/1200/400'); ">
+					<img src="http://placebear.com/g/800/400"/>
+				</div>
+				<div class="blog-text">
+				        <div class="wrap clearfix">
+				            <div class="blog-head clearfix">
+				                <h2>From the Blog</h2>
+				                <div class="cycle-pager"></div>
+				            </div>
+
+				            <h4>When is the Best Time to Invest?</h4>
+
+				            <div class="meta">
+				                <a href="#economics">Economics</a> <time>July 4th, 2015</time>
+				            </div>
+
+				            <p>Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. Vestibulum ante ipsum primis in faucibus orci luctus.Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor.</p><a href="" class="read-more">Read More</a>
+				        </div>
+				    </div>
+			</div>
+			<div>
+				<div class="blog-photo" style="background: url('http://placebear.com/g/1200/400'); ">
+					<img src="http://placebear.com/g/800/400"/>
+				</div>
+				<div class="blog-text">
+				        <div class="wrap clearfix">
+				            <div class="blog-head clearfix">
+				                <h2>From the Blog</h2>
+				                <div class="cycle-pager"></div>
+				            </div>
+
+				            <h4>When is the Best Time to Invest?</h4>
+
+				            <div class="meta">
+				                <a href="#economics">Economics</a> <time>July 4th, 2015</time>
+				            </div>
+
+				            <p>Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. Vestibulum ante ipsum primis in faucibus orci luctus.Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor.</p><a href="" class="read-more">Read More</a>
+				        </div>
+				    </div>
 			</div>
 		</div>
-		<div class="blog-photo" style="background: url('http://placebear.com/g/1200/400'); "></div>
 
 	</section>
 

@@ -32,7 +32,13 @@ jQuery(function($) {
 		//alert('all your base are belong to us');
 	});
 
-	//$('#from-blog').owlCarousel();
+	$('#blog-slider').cycle({
+		slides: '> div',
+		pager: '.cycle-pager',
+		swipe: true,
+		pagerTemplate: '<span></span>'
+	}).cycle('pause');
+	
 
 });
 $(document).scroll(function() {
@@ -67,12 +73,6 @@ $(document).scroll(function() {
 
         // if transform3d isn't available, use top over background-position
         $('.inner-header').css('background-position-y', -Math.ceil(n/4) + 'px');
-
-     
-
-
-
-
 });
 
 function _visibleSearch() {
@@ -121,6 +121,7 @@ function _mobilemenu() {
 		var sub_menu = $(this).children("ul");
 		$(this).children('span').click(function(event) {
 			var current_submenu = $(this).parent().children("ul");
+			$(this).parent().toggleClass('active');
 			var sub_menu = $(".current-menu-ancestor ul");
 			$(".dropdwn-btn").addClass(dropDownicon).removeClass(dropUpicon);
 			if (current_submenu.hasClass("active-submenu")) {
@@ -192,12 +193,6 @@ $('#how-we-tabs').responsiveTabs({
     startCollapsed: 'accordion'
 });
 
-/*
-function openFirstPanel(){
-  $('.accordion > dt:first-child').next().addClass('active').slideDown();
-  $('.accordion > dt:first-child a').addClass('active');
-}
-*/
 function _accordians() {
 	var allPanels = $('.accordion > dd').hide();
 	// openFirstPanel();
@@ -305,12 +300,6 @@ function landingTabs() {
 		return false;
 	});
 }
-$(window).load(function() {
-/*
-	$('.animated .animated-row .block').addClass('go');
-	$('.loader').addClass('go');
-*/
-});
 	
 	$.fn.isOnScreen = function() {
 	var win = $(window);
@@ -324,35 +313,3 @@ $(window).load(function() {
 	  	return (!(viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 	  }
 };
-
-/*
-	var content = $(this).attr('data-bio');
-		name = $(this).attr('data-name');
-		job = $(this).attr('data-job'); 
-	    bio = $('.team .full-bio');
-	    linkedin = $(this).attr('data-social-l');
-	    ////
-	    $('.full-bio div').html(content); 
-		$('.full-bio article h3').html(name);
-		$('.full-bio article h4').html(job);
-		$('.full-bio article a.social').attr('href', linkedin);
-		//$('.full-bio > h3 > small').html(job);
-*/
-/*
-        var Offie = $('.we-are-unique .col-left .plax').offset().top + $('.we-are-unique .col-left .plax').outerHeight();
-        var nn = n - Offie/2;
-        var Offie1 = $('.we-are-always').offset().top + $('.we-are-always').outerHeight();
-        var nm = n + Offie1/2;
-*/
-//         console.log(nn);
-/*
-        $('.we-are-unique .col-left .plax').css({
-            'webkitTransform' : 'translate3d(-50%, ' + nn + 'px, 0)',
-            'MozTransform'    : 'translate3d(-50%, ' + nn + 'px, 0)',
-            'msTransform'     : 'translateY(-50%'   + nn + 'px)',
-            'OTransform'      : 'translate3d(-50%, ' + nn + 'px, 0)',
-            'transform'       : 'translate3d(-50%, ' + nn + 'px, 0)',
-        });
-*/
-	// if transform3d isn't available, use top over background-position
-	//$('.we-are-unique .col-left').css('background-position', 'center '+'-'+Math.ceil(n/7) + 'px');

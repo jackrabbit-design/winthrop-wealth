@@ -1,21 +1,15 @@
 <?php /*Template Name: Services Landing*/ get_header(); the_post(); ?>
-<?php if(get_the_post_thumbnail()) { $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'inner-banner'); ?>
-<div class="inner-header" style="background: url(<?php echo $image[0]; ?>) no-repeat center center;">
-<?php } else { $di = get_field('default_interior_banner','option'); ?>
-<div class="inner-header" style="background: url(<?php echo $di['sizes']['inner-banner']; ?>) no-repeat center center;">
-<?php } ?>
-	    <div class="inner-header-wrap">
-		    <div class="title-wrap">
-	        <h1 class="page-title"><?php the_title(); ?></h1>
-		    </div>
-	    </div>
-    </div>
+
+
+<?php echo get_template_part('inc/inc', 'banner'); ?>
+
+
     <main class="services-landing">
-	    <section class="intro">
-		    <div class="intro-wrap">
-				<?php the_content(); ?>
-			</div>
-	    </section>
+<section class="top-content wrapper" style="border: none;">
+	<div class="top-wrap">
+		<?php the_content(); ?>
+	</div>
+</section>
 	    <div id="tabs">
 		    <ul>
 			    <li><a href="#tab-1">Personal</a></li>
