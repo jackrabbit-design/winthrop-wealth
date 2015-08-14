@@ -39,6 +39,8 @@ add_image_size( 'inner-banner', 1600, 600, true);
 add_image_size( 'hero', 1600, 700, true);
 add_image_size( 'hero-mobile', 768, 500, true);
 add_image_size( 'side-blog', 290, 150, true);
+add_image_size( 'home-blog-large', 1200, 400, true);
+add_image_size( 'home-blog-mobile', 800, 400, true);
 add_image_size( 'service-icon', 213, 9999, false);
 /* add_image_size( 'inner-banner', 290, 150, true); */
 add_image_size( 'team-full', 239, 525, true);

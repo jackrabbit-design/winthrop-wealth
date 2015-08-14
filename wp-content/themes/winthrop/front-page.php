@@ -47,80 +47,57 @@
 		<div class="container">
 		
 			<div class="what-header">
-				<h2>What we do</h2>
-				<p>Our mission is to help clients discover and achieve their success. Our nationally recognized advisors bring a fresh, multi-genertational perspective to ensure your unique needs are continually managed and our trust-centered relationship is productive and long lasting.</p>
+				<?php the_content(); ?>
 			</div>
 			<div class="clearfix what-content">
 				<div class="personal column">
 					<h3>Personal</h3>
-					<p>Winthrop thrives at helping individuals discover and achieve their life goals by creating a sound investment plan that aligns financial needs with retirement goals.</p>
+					<p><?php the_field('personal_overview'); ?></p>
+					<?php if(have_rows('personal_fields')) : ?>
 					<ul>
+						<?php while(have_rows('personal_fields')) : the_row() ; ?>
 						<li>
-						<a href="#">
-							<div class="icon w-clipboard"></div>
+						<a href="<?php the_sub_field('personal_icon_link'); ?>">
+							<?php $icon = get_sub_field('personal_icon'); ?>
+							
+							<div class="icon <?php echo $icon; ?>"></div>
+
 							<div class="icon-content">
-								<h5>Wealth Planning</h5>
+								<h5><?php the_sub_field('personal_service_title'); ?></h5>
 								<span>READ MORE</span>
 							</div>
 						</a>
 						</li>
-						<li>
-						<a href="#">
-							<div class="icon w-briefcase"></div>
-							<div class="icon-content">
-								<h5>Investment Management</h5>
-								<span>READ MORE</span>
-							</div>
-						</a>
-						</li>
-						<li>
-						<a href="#">
-							<div class="icon w-pig"></div>
-							<div class="icon-content">
-								<h5>Tax & Estate Planning</h5>
-								<span>READ MORE</span>
-							</div>
-						</a>
-						</li>
+					<?php endwhile; ?>
 					</ul>
+				<?php endif; ?>
 				</div>
 				<div class="business column">
 					<h3>Business</h3>
-					<p>Winthrop serves a broad spectrum of business clients—business owners, institutions, and endowments—applying the same formula of personal attention and sound investment advice.</p>
+					<p><?php the_field('business_overview'); ?></p>
+				<?php if(have_rows('business_fields')) : ?>
 					<ul>
+						<?php while(have_rows('business_fields')) : the_row() ; ?>
 						<li>
-						<a href="#">
-							<div class="icon w-paper"></div>
+						<a href="<?php the_sub_field('business_service_title'); ?>">
+							<?php $icon = get_sub_field('business_icon'); ?>
+							
+							<div class="icon <?php echo $icon; ?>"></div>
+
 							<div class="icon-content">
-								<h5>Retirement Plans</h5>
+								<h5><?php the_sub_field('business_service_title'); ?></h5>
 								<span>READ MORE</span>
 							</div>
 						</a>
 						</li>
-						<li>
-						<a href="#">
-							<div class="icon w-building"></div>
-							<div class="icon-content">
-								<h5>Institutions and endowments</h5>
-								<span>READ MORE</span>
-							</div>
-						</a>
-						</li>
-						<li>
-						<a href="#">
-							<div class="icon w-hand"></div>
-							<div class="icon-content">
-								<h5>Sucession Planning</h5>
-								<span>READ MORE</span>
-							</div>
-						</a>
-						</li>
+					<?php endwhile; ?>
 					</ul>
+				<?php endif; ?>
 				</div>
 				
 				
 			</div>
-			<a href="#" class="btn green">Work with us</a>
+			<a href="<?php echo get_permalink(76); ?>" class="btn green">Work with us</a>
 		</div>
 	</section>
 	
@@ -138,12 +115,20 @@
 		</div>
 	</section>
 	
+	<?php query_posts(array('posts_type' => 'posts', 'posts_per_page' => 3 )); if(have_posts()) : ?>
+
 	<section class="from-the-blog">
 
 		<div id="blog-slider">
+			<?php while(have_posts()) : the_post(); ?>
 			<div>
-				<div class="blog-photo" style="background: url('http://placebear.com/g/1200/400'); ">
-					<img src="http://placebear.com/g/800/400"/>
+				<?php 
+						$img_id = get_post_thumbnail_id($post->ID); 
+						$image = wp_get_attachment_image_src($img_id, 'home-blog-large');
+						$imageMob = wp_get_attachment_image_src($img_id, 'home-blog-mobile');
+						$alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
+				<div class="blog-photo" style="background: url('<?php echo $image[0]; ?>'); ">
+					<img src='<?php echo $imageMob[0]; ?>' alt="<?php echo $alt_text; ?>"/>
 				</div>
 				<div class="blog-text">
 				        <div class="wrap clearfix">
@@ -151,40 +136,18 @@
 				                <h2>From the Blog</h2>
 				                <div class="cycle-pager"></div>
 				            </div>
-
-				            <h4>When is the Best Time to Invest?</h4>
-
+				            <h4><?php the_title(); ?></h4>
 				            <div class="meta">
-				                <a href="#economics">Economics</a> <time>July 4th, 2015</time>
+				                <a href="#economics">Economics</a> <time><?php the_time('F'); ?> <?php the_time('j'); ?>th, <?php the_time('Y'); ?></time>
 				            </div>
-
-				            <p>Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. Vestibulum ante ipsum primis in faucibus orci luctus.Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor.</p><a href="" class="read-more">Read More</a>
+				            <p><?php echo wp_trim_words( get_the_excerpt(), 40, '...' ); ?></p>
+				            <a href="" class="read-more">Read More</a>
 				        </div>
 				    </div>
 			</div>
-			<div>
-				<div class="blog-photo" style="background: url('http://placebear.com/g/1200/400'); ">
-					<img src="http://placebear.com/g/800/400"/>
-				</div>
-				<div class="blog-text">
-				        <div class="wrap clearfix">
-				            <div class="blog-head clearfix">
-				                <h2>From the Blog</h2>
-				                <div class="cycle-pager"></div>
-				            </div>
-
-				            <h4>When is the Best Time to Invest?</h4>
-
-				            <div class="meta">
-				                <a href="#economics">Economics</a> <time>July 4th, 2015</time>
-				            </div>
-
-				            <p>Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor. Vestibulum ante ipsum primis in faucibus orci luctus.Quisque non dapibus nisi. Fusce facilisis maximus eros id porttitor.</p><a href="" class="read-more">Read More</a>
-				        </div>
-				    </div>
-			</div>
+		<?php endwhile; ?>
 		</div>
-
+	<?php endif; ?>
 	</section>
 
 <?php get_footer(); ?>

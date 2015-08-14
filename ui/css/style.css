@@ -713,15 +713,11 @@ section.main aside .side-blog a { color: #566c11; font-size: 15px; font-family: 
 
 section.main aside .side-blog a.readmore { font-weight: bold; margin: 15px 0px 0px; display: block; }
 
-
-
 section.main .location-row{display: block; width: 100%; border-bottom: 1px solid #e5e5e5; margin: 0 0 26px; padding: 0 0 20px;}
 
 section.main .location-row:last-child{border-bottom: none;}
 
 section.main .location-column{width: 48%; margin: 0 2% 0 0; display: block; float: left;}
-
-
 
 section.main .philosophy{max-width: 532px; width: 55.416666666667%; margin: 0 5.208333333333% 0 0; display: block; float: left;}
 
