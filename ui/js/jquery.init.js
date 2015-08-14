@@ -1,6 +1,7 @@
 /* ========================================================================= */
 /* BE SURE TO COMMENT CODE/IDENTIFY PER PLUGIN CALL */
 /* ========================================================================= */
+new WOW().init();
 jQuery(function($) {
 
 
@@ -73,6 +74,8 @@ $(document).scroll(function() {
 
         // if transform3d isn't available, use top over background-position
         $('.inner-header').css('background-position-y', -Math.ceil(n/4) + 'px');
+
+        $('.banner-img').css('background-position-y', -Math.ceil(n/6) + 'px');
 });
 
 function _visibleSearch() {

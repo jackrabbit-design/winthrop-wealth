@@ -5,84 +5,48 @@ get_header(); the_post(); ?>
 
 <section class="top-content wrapper">
 	<div class="top-wrap">
-		<p>We act as your trusted consultant and strategic partner to assist and coordinate the pursuit of your financial, retirement, and business succession goals. We work with your other specialty advisors and professionals to provide a fully integrated plan.</p>
+		<?php the_field('top_content'); ?>
 	</div>
 </section>
 
 <section class="main clearfix">
 	<div class="philosophy">
-		<h3>Our Philosophy</h3>
-		<h4>Clients first, always – is the bedrock of our philosophy at Winthrop Wealth Management Management.</h4>
-<p>Over 30 years ago, the founding partners established our business with one thing in mind: focus on what is best for the client and the rest will follow. At Winthrop Wealth Management, we believe that helping clients discover and pursue financial success and freedom requires putting them front and center, providing them with continual and comprehensive attention. That is our purpose and our passion.</p>
-<p>Each of our clients is unique. They have diverse backgrounds and aspirations; lead different lives whether as successful entrepreneurs, athletes, physicians, dentists, or other professionals; and have specific and diverse needs.</p>
-<blockquote>We are committed to getting to know our clients personally, staying informed and involved in their careers, business ventures, and life developments. </blockquote>
-<p>Our long-term clients, many of whom have been with us for over thirty years, are a testament to the firm’s business philosophy, family boutique culture, and its strong value system.</p>
-<p>Winthrop Wealth Management believes that building trust and cultivating long-term relationships are essential to providing high-quality wealth management services. Consistent with the emphasis we place on building long-term and productive relationships is our team’s multi-generational expertise, which ensures service continuity and personalized attention across generations.</p>
+		<?php the_content(); ?>
 	</div>
 	<div class="cornerstones">
-		<h3>Cornerstones Of Our Business</h3>
+		<h3><?php the_field('accordion_title'); ?></h3>
+		<?php if(have_rows('sidebar_accordions')) : ?>
 		<ul>
+			<?php while(have_rows('sidebar_accordions')) : the_row(); ?>
 			<li class="clearfix">
 				<div class="circle"></div>
 				<div class="content">
-					<h5>Client-First Approach.</h5>
+					<h5><?php the_sub_field('title'); ?></h5>
 					<div class="hidden">
-						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
+						<?php the_sub_field('content'); ?>
 					</div>
 				</div>
 			</li>
-			<li class="clearfix">
-				<div class="circle"></div>
-				<div class="content">
-					<h5>Client-First Approach.</h5>
-					<div class="hidden">
-						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
-					</div>
-				</div>
-			</li>
-			<li class="clearfix">
-				<div class="circle"></div>
-				<div class="content">
-					<h5>Client-First Approach.</h5>
-					<div class="hidden">
-						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
-					</div>
-				</div>
-			</li>
-			<li class="clearfix">
-				<div class="circle"></div>
-				<div class="content">
-					<h5>Client-First Approach.</h5>
-					<div class="hidden">
-						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
-					</div>
-				</div>
-			</li>
-			<li class="clearfix">
-				<div class="circle"></div>
-				<div class="content">
-					<h5>Client-First Approach.</h5>
-					<div class="hidden">
-						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
-					</div>
-				</div>
-			</li>
-			<li class="clearfix">
-				<div class="circle"></div>
-				<div class="content">
-					<h5>Client-First Approach.</h5>
-					<div class="hidden">
-						<p>Our clients are our partners and often become good friends as our relationship develops over time.</p>
-					</div>
-				</div>
-			</li>
+		<?php endwhile; ?>	
 		</ul>
+	<?php endif; ?>
 	</div>
 </section>
 <section class="by-numbers">
 	<div class="wrapper">
-		<h3>Winthrop By the Numbers</h3>
+		<h3><?php the_field('by_numbers'); ?></h3>
+		<?php $c = 1; if(have_rows('by_the_numbers')) : ?>
 		<ul>
+			<?php while(have_rows('by_the_numbers')) : the_row(); ?>
+			<li class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay="<?php echo $c/3; ?>s">
+				<div><?php the_sub_field('number'); ?><?php if($sm = get_sub_field('small_text')) { ?><small><?php echo $sm; ?></small><?php } ?></div>
+				<p><?php the_sub_field('descriptions'); ?></p>
+			</li>
+		<?php $c++; endwhile; ?>
+
+	</ul>
+<?php endif; ?>
+<!-- 		<ul>
 			<li>
 				<div>1985</div>
 				<p>Founded by Earl and Mark Winthrop</p>
@@ -99,7 +63,7 @@ get_header(); the_post(); ?>
 				<div>25<small>years</small></div>
 				<p>Assoicate with LPL Financial the nations leading broker to independent advisors</p>
 			</li>
-		</ul>
+		</ul> -->
 	</div>
 </section>
 <?php get_footer(); ?>

@@ -9,7 +9,7 @@
 	    <div class="inner-header-wrap">
 		 
 		    <div class="title-wrap">
-	        <h2 class="page-title"><?php the_title(); ?></h2>
+	        <h2 class="page-title">The Blog</h2>
 		    </div>
 	    </div>
     </div>

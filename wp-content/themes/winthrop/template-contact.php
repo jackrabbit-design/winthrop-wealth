@@ -14,7 +14,7 @@
 	<div class="location-row clearfix">
 		
 		<div class="location-column">
-			<h2><?php the_sub_field('location_name'); ?></h2>
+			<h3><?php the_sub_field('location_name'); ?></h3>
 			<?php the_sub_field('column_one'); ?>
 		</div>
 		<div class="location-column">

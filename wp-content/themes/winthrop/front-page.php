@@ -56,7 +56,7 @@
 					<?php if(have_rows('personal_fields')) : ?>
 					<ul>
 						<?php while(have_rows('personal_fields')) : the_row() ; ?>
-						<li>
+						<li class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s"  data-wow-offset="20">
 						<a href="<?php the_sub_field('personal_icon_link'); ?>">
 							<?php $icon = get_sub_field('personal_icon'); ?>
 							
@@ -78,8 +78,8 @@
 				<?php if(have_rows('business_fields')) : ?>
 					<ul>
 						<?php while(have_rows('business_fields')) : the_row() ; ?>
-						<li>
-						<a href="<?php the_sub_field('business_service_title'); ?>">
+						<li class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".75s"  data-wow-offset="20">
+						<a href="<?php the_sub_field('business_icon_link'); ?>">
 							<?php $icon = get_sub_field('business_icon'); ?>
 							
 							<div class="icon <?php echo $icon; ?>"></div>
@@ -110,7 +110,7 @@
 				<a href="" class="btn green">Our Story</a>
 		
 			
-			<img src="ui/images/our-story-home.png"/>
+			<img src="ui/images/our-story-home.png" class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".5s"/>
 				</div>
 		</div>
 	</section>

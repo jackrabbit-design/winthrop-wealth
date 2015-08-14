@@ -36,7 +36,7 @@ add_filter('login_errors',create_function('$a', "return null;"));
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 64, 64, true );
 add_image_size( 'inner-banner', 1600, 600, true);
-add_image_size( 'hero', 1600, 700, true);
+add_image_size( 'hero', 1600, 900, true);
 add_image_size( 'hero-mobile', 768, 500, true);
 add_image_size( 'side-blog', 290, 150, true);
 add_image_size( 'home-blog-large', 1200, 400, true);
