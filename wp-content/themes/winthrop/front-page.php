@@ -107,7 +107,7 @@
 				<small>What is the Story behind</small>
 				<h2>Winthrop Wealth Managment</h2>
 				
-				<a href="" class="btn green">Our Story</a>
+				<a href="/our-story/" class="btn green">Our Story</a>
 		
 			
 			<img src="ui/images/our-story-home.png" class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".5s"/>
