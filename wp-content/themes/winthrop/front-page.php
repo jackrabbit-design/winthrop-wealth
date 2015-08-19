@@ -133,7 +133,7 @@
 				<div class="blog-text">
 				        <div class="wrap clearfix">
 				            <div class="blog-head clearfix">
-				                <h2>From the Blog</h2>
+				                <h2>Insights</h2>
 				                <div class="cycle-pager"></div>
 				            </div>
 				            <h4><?php the_title(); ?></h4>

@@ -1706,7 +1706,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#637a16',endCol
 
 #footer-nav > ul { overflow: hidden; padding: 0; line-height: 18px;}
 
-#footer-nav > ul > li { vertical-align: top; display: inline-block; text-align: left; width: auto; margin-right: 8%; }
+#footer-nav > ul > li { vertical-align: top; display: inline-block; text-align: left; width: auto; margin-right: 6%; }
 
 #footer-nav > ul > li:last-child{margin-right: 0;}
 
