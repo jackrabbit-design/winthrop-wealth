@@ -1856,6 +1856,8 @@ body { font: 16px/150% 'proxima_nova', sans-serif; }
 
 .loadmore a { display: inline-block; color: #fff; border: 1px solid #fff; -webkit-border-radius: 4px; -moz-border-radius-topleft: 4px; border-radius: 4px; -webkit-transition: all, 0.2s, ease-in; -moz-transition: all, 0.2s, ease-in; transition: all, 0.2s, ease-in; text-transform: uppercase; line-height: 42px; padding: 0 22px; font-weight: bold; font-size: 14px; color: #566C11; border: 1px solid #566C11; }
 
+#riskalyze-btn-container a{box-shadow: none !important; color: #fff; font-family: 'proxima_nova', sans-serif !important; font-weight: bold; display: inline-block !important; text-transform: uppercase; font-size: 14px; margin: 0 !important;}
+#riskalyze-btn-container a:hover{color: #566c11;}
 /* ========================================================================= */
 /* !MEDIA QUERIES */
 /* ========================================================================= */
