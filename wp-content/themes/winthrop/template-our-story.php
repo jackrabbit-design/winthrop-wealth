@@ -36,21 +36,21 @@
 			<h4>We Are <br/>Not Robots</h4>
 			<img src="<?php bloginfo('url'); ?>/ui/images/robot-2.png" alt="" />
 			<div class="hover">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et faucibus magna. Mauris tincidunt hendrerit pretium. Aenean et varius lorem. In scelerisque sapien ut laoreet porttitor</p></div>
+			<p>In a world of increasing digitalization, we provide a human element and employ flexibility in our thinking to generate creative solutions.</p></div>
 		</div>
 		<div class="box mid">
 			
 			<h4>We Are <br/>Boutique</h4>
 			<img src="<?php bloginfo('url'); ?>/ui/images/our-story/we-are/boutique.png" alt="" />
 			<div class="hover">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et faucibus magna. Mauris tincidunt hendrerit pretium. Aenean et varius lorem. In scelerisque sapien ut laoreet porttitor</p></div>
+			<p>We strive to maintain the highest level of personalized attention by investing time in building strong, long-lasting relationships.</p></div>
 		</div>
 		<div class="box">
 			
 			<h4>Clients Are <br/>Not Just a Number</h4>
 			<img src="<?php bloginfo('url'); ?>/ui/images/our-story/we-are/numbers.png" alt="" />
 			<div class="hover">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et faucibus magna. Mauris tincidunt hendrerit pretium. Aenean et varius lorem. In scelerisque sapien ut laoreet porttitor</p></div>
+			<p>Every client is a unique individual. We take a holistic approach to working with clients, as no two clients are the same.</p></div>
 		</div>
 	</div>
 	</div>
@@ -65,15 +65,7 @@
 				<img src="<?php bloginfo('url'); ?>/ui/images/The-Entrepreneurial-Spirit.png"/>
 				<div class="slide-content">
 					<h3>The Entrepreneurial Spirit</h3>
-					<p>We were always working (delivering papers, cutting lawns, anything) from a very young age.</p>
-				</div>
-				
-			</div>
-			<div>
-				<img src="<?php bloginfo('url'); ?>/ui/images/Due-Diligence.png"/>
-				<div class="slide-content">
-					<h3>Due Diligence</h3>
-					<p>Prior to founding Winthrop Wealth Management, Earl and Mark became Certified Public Accountants (CPAs). Earl spent 8 years working for Big Four accounting firms and Mark spent nearly 5 years at the IRS.</p>
+					<p>We grew up with an inquisitive mindset and challenged the standard quo, constantly seeking ways to improve ourselves and the lives of those around us. </p>
 				</div>
 				
 			</div>
@@ -81,7 +73,7 @@
 				<img src="<?php bloginfo('url'); ?>/ui/images/Investment-Interest.png"/>
 				<div class="slide-content">
 					<h3>Investment Interest</h3>
-					<p>We were always very interested in the investment world and the first stocks we bought with our savings were W.R. Grace & Company and Texaco.  </p>
+					<p>Interested in how to put our own hard earned capital to work, we developed a passion for the investment world from a young age.  We discovered the power of utilizing the market to build wealth and diversify risk. </p>
 				</div>
 				
 			</div>
@@ -89,15 +81,25 @@
 				<img src="<?php bloginfo('url'); ?>/ui/images/Thoughtful-Plannning.png"/>
 				<div class="slide-content">
 					<h3>Thoughtful Plannning</h3>
-					<p>We worked throughout high school and college and our goal was to build an investment company. Our plan was to get the best training and eventually start our own independent firm.  </p>
+					<p>We worked relentlessly with a goal to build careers in the investment industry. Our mission was to get the best training and eventually start our own independent firm.  </p>
 				</div>
 				
 			</div>
 			<div>
+				<img src="<?php bloginfo('url'); ?>/ui/images/Due-Diligence.png"/>
+				<div class="slide-content">
+					<h3>Due Diligence</h3>
+					<p>Prior to founding Winthrop Wealth Management in 1985, Earl and Mark were Certified Public Accountants (CPAs). Earl spent 8 years working for Big Four accounting firms and Mark spent nearly 5 years at the IRS investigating abusive tax shelters and investment schemes.</p>
+				</div>
+				
+			</div>
+
+
+			<div>
 				<img src="<?php bloginfo('url'); ?>/ui/images/Pioneers-In-Finance.png"/>
 				<div class="slide-content">
-					<h3>Pioneers In Finance</h3>
-					<p>We became pioneers in utilizing a fee-based approach and avoiding potential conflicts of interest to provide truly unbiased investment advice. We sit on the same side of the table as our clients.</p>
+					<h3>Pioneers In Wealth Management</h3>
+					<p>Our pursuit to provide truly unbiased investment advice led us to become pioneers in utilizing a fee-based approach, aligning our interests with those of our clients. </p>
 				</div>
 				
 			</div>
@@ -120,7 +122,7 @@
 						<img src="<?php bloginfo('url'); ?>/ui/images/importance-individual.png" class="fore"/>
 						
 					</div>
-					<span>THE IMPORTANCE OF <br/>THE INDIVIDUAL</span>
+					<span>THE IMPORTANCE OF <br/>THE INDIVIDUAL</span>
 				</a>
 			</li>
 			<li class="psychology">
@@ -130,7 +132,7 @@
 						<img src="<?php bloginfo('url'); ?>/ui/images/psychology-back.png" class="back"/>
 						<img src="<?php bloginfo('url'); ?>/ui/images/psychology.png" class="fore"/>
 					</div>
-					<span>THE IMPORTANCE OF<br/> INVESTOR PSYCHOLOGY <br/>AND EDUCATION</span>
+					<span>THE IMPORTANCE OF<br/> INVESTOR PSYCHOLOGY <br/> AND EDUCATION</span>
 				</a>
 			</li>
 			<li class="risk-reward">
@@ -140,7 +142,7 @@
 						<img src="<?php bloginfo('url'); ?>/ui/images/risk.png" class="fore two"/>
 						<img src="<?php bloginfo('url'); ?>/ui/images/reward.png" class="fore"/>
 					</div>
-					<span>THE IMPORTANCE OF<br/> UNDERSTANDING RISK <br/>AND REWARD</span>
+					<span>THE IMPORTANCE OF<br/> UNDERSTANDING RISK <br/> AND REWARD</span>
 				</a>
 			</li>
 			<li class="client">
@@ -156,19 +158,19 @@
 		
 		<div id="individual" class="tab">
 			<h3>The Importance of the Individual</h3>
-			<p>Our clients are all very different and have different lifestyles and needs. Our success has been predicated on our belief that clients are unique individuals and should be treated as such. They do not fit into a standard mold (think cookie cutter). We craft everything we do to fit the specific needs of the client – not the other way around. A personalized, goal driven planning and investment process is the only way to address these individual needs.</p>
+			<p>Individuality is an inherent trait of human nature.  Our clients have unique lifestyles, needs, and aspirations.  We craft everything we do to fit the specific needs of our clients by taking the time to listen and learn each client story. We firmly believe that a personalized wealth management process, driven by personal goals, is the only way to address these individual needs. </p>
 		</div>
 		<div id="psychology" class="tab">
 			<h3>The Importance of Investor Psychology and Education</h3>
-			<p>Our clients are all very different and have different lifestyles and needs. Our success has been predicated on our belief that clients are unique individuals and should be treated as such. They do not fit into a standard mold (think cookie cutter). We craft everything we do to fit the specific needs of the client – not the other way around. A personalized, goal driven planning and investment process is the only way to address these individual needs.</p>
+			<p>We learned, early on in our careers, the value of maintaining a long-term perspective. The majority of the value created within a portfolio comes from sticking to a defined strategy and avoiding emotionally charged decision making.  We act as an emotional circuit breaker for our clients, helping them to stay on course and make rational decisions that will benefit them over the long-term. </p>
 		</div>
 		<div id="risk-and-reward" class="tab">
 			<h3>The Importance of Understanding Risk and Reward</h3>
-			<p>Our clients are all very different and have different lifestyles and needs. Our success has been predicated on our belief that clients are unique individuals and should be treated as such. They do not fit into a standard mold (think cookie cutter). We craft everything we do to fit the specific needs of the client – not the other way around. A personalized, goal driven planning and investment process is the only way to address these individual needs.</p>
+			<p>We take risk/reward very seriously as our clients have worked incredibly hard to build and preserve their wealth.  We employ a rigorous process to thoroughly understand the risk/reward tradeoff associated with each investment decision we make.  This philosophy has helped us avoid many market trends that have destroyed value for investors. </p>
 		</div>
 		<div id="client-experience" class="tab">
 			<h3>The Importance of The Client Experience</h3>
-			<p>Our clients are all very different and have different lifestyles and needs. Our success has been predicated on our belief that clients are unique individuals and should be treated as such. They do not fit into a standard mold (think cookie cutter). We craft everything we do to fit the specific needs of the client – not the other way around. A personalized, goal driven planning and investment process is the only way to address these individual needs.</p>
+			<p>Client experience is a key ingredient in any successful long-term relationship. We coordinate with our clients’ other specialty advisers and tap our deep professional resources to create a seamless and enjoyable experience.  We work tirelessly to bring simplicity and comfort to our clients’ lives by providing a streamlined wealth management process.  By enabling our clients to stay focused on their careers and passions they are able to concentrate on their bottom line and lead happier lives.</p>
 		</div>
 		
 	</div>
@@ -207,7 +209,7 @@
 			</div>
 			<div class="content">
 				<h3>Smart Growth</h3>
-				<p>As we have grown our asset base to over $1B we have added key investment and support personnel to our staff.</p>
+				<p>As we grow, we continue to invest a vast amount of thought and energy into the structure of our firm ensuring that we maintain the ability to make decisions that directly benefit our clients. </p>
 			</div>
 		</div>
 	</div>
@@ -219,7 +221,7 @@
 		</div>
 			<div class="content">
 				<h3>Tech-Forward</h3>
-				<p>We continously take advantage of the latest technology advances in our industry.</p>
+				<p>We continuously take advantage of the latest technology advances in our industry.</p>
 			</div>
 		</div>
 	</div>
@@ -230,7 +232,7 @@
 		</div>
 			<div class="content">
 				<h3>Family Friendly</h3>
-				<p>We maintain the family aspect - 2 more Winthrops have joined the firm.</p>
+				<p>We maintain the family aspect with our boutique culture.  Since 2013, two more Winthrop family members have joined the team adding to the family roots.</p>
 			</div>
 		</div>
 	</div>
@@ -244,7 +246,7 @@
 		
 			<div class="content">
 				<h3>Accessible</h3>
-				<p>We make sure we’re accessible - our new downtown office opened in 2013</p>
+				<p>We make sure we’re accessible – our new downtown office opened in 2013</p>
 			</div>
 		</div>
 	</div>
@@ -254,7 +256,7 @@
 <section class="our-story-begin">
 	<div class="wrapper">
 		<h2>Our Story is just beginning</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent iaculis magna ac ex tristique ultrices. Vestibulum vel hendrerit ipsum. Praesent viverra rutrum porta. Duis tellus elit, fringilla et sagittis in, sodales et mi. In efficitur sapien mauris, eget scelerisque libero dictum vel.</p>
+		<p>We are committed to growing our business for the benefit of our clients. That means, taking Winthrop Wealth Management into the next generation by providing our clients best in class expertise, unrivalled service, and continuity.  Our multi-generational team is working every day to deliver on our mission of excellence.</p>
 		<a href="" class="btn green">GET STARTED WITH US</a>
 	</div>
 </section>

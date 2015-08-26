@@ -32,6 +32,10 @@ jQuery(function($) {
 		$(this).toggleClass('active');
 		//alert('all your base are belong to us');
 	});
+// class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pager=".banner-pager" data-cycle-swipe=true data-cycle-swipe-fx=scrollHorz data-cycle-slides=">li" data-cycle-timeout="0" data-cycle-pager-template="<span></span>"
+
+
+
 
 	$('#blog-slider').cycle({
 		slides: '> div',
@@ -39,7 +43,20 @@ jQuery(function($) {
 		swipe: true,
 		pagerTemplate: '<span></span>'
 	}).cycle('pause');
+
+	$('#homeSlider').cycle({
+		slides: '> li',
+		fx: 'scrollHorz',
+		pager: '.banner-pager',
+		swipe: true,
+		pagerTemplate: '<span></span>'
+	}).cycle('pause').on('cycle-after', function(event,opts){
+		$('.cycle-slide').removeClass('active')
+		$('.cycle-slide.cycle-slide-active').addClass('active')
+	});
 	
+
+
 
 });
 $(document).scroll(function() {
@@ -233,7 +250,7 @@ function _teamDesktop() {
 			$('.full-bio').load('team-member/' + url + '/ #info', function() {
 				$(this).hide();
 				$(this).fadeIn(200);
-				$('.biography').jScrollPane();
+				//$('.biography').jScrollPane();
 				$('button.close-bio').click(function() {
 					$(this).parent().parent('.full-bio').removeClass('open');
 					$('.team  ul  li').removeClass('open');

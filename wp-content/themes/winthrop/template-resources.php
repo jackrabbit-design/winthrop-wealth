@@ -24,7 +24,7 @@
 			    	<?php if(get_sub_field('riskbutton')){ ?>
 						<script src="https://riskalyze.com/hosted/b5fffa4bb6a6a6ec73f0/rq/It/sm/btn.js" type="text/javascript" data-logo="1" data-button-title="What's Your Risk Number?"></script>
 			    	<?php } else { ?> 
-			    	<a href="<?php echo $link; ?>" <?php if(get_sub_field('new_tab')) { echo 'target="_blank";' } ?>class="link white">Learn More</a>
+			    	<a href="<?php echo $link; ?>" <?php if(get_sub_field('new_tab')) { echo 'target="_blank"'; } ?>class="link white">Learn More</a>
 			    	<?php } ?>
 			    </li>	    
 			    <?php endwhile; ?>

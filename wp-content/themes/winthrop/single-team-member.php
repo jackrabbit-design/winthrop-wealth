@@ -25,7 +25,8 @@
 	                <?php } ?>
 	            </article>
 	            <?php $img = get_field('full_bio'); ?>
-	            <img src="<?php echo $img['sizes']['team-full']; ?>" alt="<?php $img['alt']; ?>">
+	            <div class="bio-image" style="background-image: url('<?php echo $img['sizes']['team-full']; ?>');"></div>
+	            	<!-- <img src="<?php echo $img['sizes']['team-full']; ?>" alt="<?php $img['alt']; ?>"> -->
         </div>
         </section>
 </main>

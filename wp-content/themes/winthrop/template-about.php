@@ -15,10 +15,10 @@ get_header(); the_post(); ?>
 	</div>
 	<div class="cornerstones">
 		<h3><?php the_field('accordion_title'); ?></h3>
-		<?php if(have_rows('sidebar_accordions')) : ?>
+		<?php $c = 1; if(have_rows('sidebar_accordions')) : ?>
 		<ul>
 			<?php while(have_rows('sidebar_accordions')) : the_row(); ?>
-			<li class="clearfix">
+			<li class="clearfix <?php if($c ==1) { echo 'active'; } ?>">
 				<div class="circle"></div>
 				<div class="content">
 					<h5><?php the_sub_field('title'); ?></h5>
@@ -27,7 +27,7 @@ get_header(); the_post(); ?>
 					</div>
 				</div>
 			</li>
-		<?php endwhile; ?>	
+		<?php $c++; endwhile; ?>	
 		</ul>
 	<?php endif; ?>
 	</div>

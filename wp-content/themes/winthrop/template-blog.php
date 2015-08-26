@@ -26,6 +26,16 @@
 	    </section>
 	    
 	   <?php get_template_part('inc-blogsearch'); ?>
+
+	
+
+	   <?php /*if($terms = get_terms('category')) : 
+	   	foreach ($terms as $term) {
+	   		echo $term->name;
+	   	}
+	
+		
+		<?php endif; */?>
 	    
 	    <?php $i = 1; $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;   query_posts(array('post_type'=> 'post', 'posts_per_page'=> 6, 'order_by' => 'date', 'paged' => $paged, 'offset' => 1)); if(have_posts()): $count = 1; ?>
 	    <ul class="clearfix query-results">

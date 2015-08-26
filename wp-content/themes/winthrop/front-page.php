@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 	<div id="slider">
 		<div class="top-shadow shadow"></div>
-		<?php if(have_rows('home_page_banners')) : ?>
-			<ul class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pager=".banner-pager" data-cycle-swipe=true data-cycle-swipe-fx=scrollHorz data-cycle-slides=">li" data-cycle-timeout="0" data-cycle-pager-template="<span></span>">
+		<?php $c = 1; if(have_rows('home_page_banners')) : ?>
+			<ul id="homeSlider">
 			<?php while(have_rows('home_page_banners')) : the_row(); 
 			    // Fields
 			    $title = get_sub_field('banner_title');
@@ -16,7 +16,7 @@
 
 			    $imgM = wp_get_attachment_image_src($imgSrc,'hero-mobile');
 			?>
-			<li>
+			<li <?php if($c == 1) { echo 'class="active"'; } ?>>
 				<div class="banner-img" style="background-image:url(<?php echo $img[0]; ?>)">
 					<img src="<?php echo $imgM[0]; ?>"/>
 				</div>
@@ -37,7 +37,7 @@
 			    </div>
 			
 			</li>
-			<?php endwhile; ?>
+			<?php $c++; endwhile; ?>
 			</ul>
 		<?php endif; ?>
 		
@@ -108,11 +108,22 @@
 				<h2>Winthrop Wealth Managment</h2>
 				
 				<a href="/our-story/" class="btn green">Our Story</a>
-		
-			
-			<img src="ui/images/our-story-home.png" class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".5s"/>
 				</div>
-		</div>
+			<div class="wrapper">
+			
+					<div class="animated-hero">
+						<img src="<?php bloginfo('url'); ?>/ui/images/people-row-2.png" class="people people-row-2"/>
+						<img src="<?php bloginfo('url'); ?>/ui/images/people-row-1.png" class="people people-row-1"/>
+						<img src="<?php bloginfo('url'); ?>/ui/images/heart.png" class="heart animated"/>
+						<img src="<?php bloginfo('url'); ?>/ui/images/pie.png" class="pie animated"/>
+						<img src="<?php bloginfo('url'); ?>/ui/images/bar.png" class="bar animated"/>
+						<img src="<?php bloginfo('url'); ?>/ui/images/money.png" class="money animated"/>
+						<img src="<?php bloginfo('url'); ?>/ui/images/pie-2.png" class="pie-2 animated"/>
+						<img src="<?php bloginfo('url'); ?>/ui/images/line.png" class="heart-2 animated"/>
+					</div>
+			</div>
+
+		
 	</section>
 	
 	<?php query_posts(array('posts_type' => 'posts', 'posts_per_page' => 3 )); if(have_posts()) : ?>
