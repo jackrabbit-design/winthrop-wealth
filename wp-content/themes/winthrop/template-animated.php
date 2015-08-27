@@ -2,16 +2,11 @@
 	/* Template Name: Animated */ 
 	get_header(); the_post(); ?>
 <?php echo get_template_part('inc/inc', 'banner'); ?>
-    <section class="main clearfix">
-	<article>
-	<?php the_content(); ?>
-	</article>
-	<aside>
-	<div class="extra-content">
-	<?php the_field('side_text'); ?>
+  <section class="top-content wrapper">
+	<div class="top-wrap">
+		<?php the_content(); ?>
 	</div>
-	</aside>
-    </section>
+</section>
       <section class="main clearfix">
        <section class="animated">
            <div class="loader"></div>

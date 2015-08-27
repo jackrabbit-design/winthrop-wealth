@@ -142,9 +142,25 @@
 					<img src='<?php echo $imageMob[0]; ?>' alt="<?php echo $alt_text; ?>"/>
 				</div>
 				<div class="blog-text">
+				
+
 				        <div class="wrap clearfix">
 				            <div class="blog-head clearfix">
-				                <h2>Insights</h2>
+				            		<?php
+					$terms = get_the_terms( $post->ID, 'category' );
+
+					if ( $terms && ! is_wp_error( $terms ) ) : 
+
+					$draught_links = array();
+
+					foreach ( $terms as $term ) {
+					$draught_links[] = $term->name;
+					}
+
+					$on_draught = join( ", ", $draught_links );
+					?>
+				                <h2><?php echo $on_draught; ?></h2>
+				                <?php endif; ?>
 				                <div class="cycle-pager"></div>
 				            </div>
 				            <h4><?php the_title(); ?></h4>

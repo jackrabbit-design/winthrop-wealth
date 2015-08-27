@@ -20,7 +20,7 @@
 			     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 			    <p class="blog-meta"><?php the_category(', '); ?> <span>|</span> <strong><?php echo get_the_date('F j');  echo'th, '; echo get_the_date('Y'); ?></strong></p>
 			    <p><?php $ec = get_the_excerpt(); $trimEx = wp_trim_words($ec, 25); echo $trimEx; ?></p>
-			    <a href="<?php the_permalink(); ?>" class="btn green">Learn More</a>
+			    <a href="<?php the_permalink(); ?>" class="btn green-text">Learn More</a>
 		    </div>
 		    <?php endwhile; endif; wp_reset_query(); ?>
 	    </section>
@@ -36,7 +36,7 @@
 	
 		
 		<?php endif; */?>
-	    
+	    <div id="everyblog">
 	    <?php $i = 1; $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;   query_posts(array('post_type'=> 'post', 'posts_per_page'=> 6, 'order_by' => 'date', 'paged' => $paged, 'offset' => 1)); if(have_posts()): $count = 1; ?>
 	    <ul class="clearfix query-results">
 	    <?php while(have_posts()) : the_post(); ?>
@@ -61,6 +61,7 @@ $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
 		<?php else: ?>
 		
 		<?php endif; wp_reset_query(); ?>
+	</div>
 	    
 	</main>
 <?php get_footer(); ?>
