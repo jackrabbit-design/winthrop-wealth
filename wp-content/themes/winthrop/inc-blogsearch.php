@@ -1,5 +1,5 @@
 	<section class="blog-filter">
-		<h2>Categories:</h2>
+<!-- 		<h3>Categories:</h3> -->
 			<ul class="clearfix">
 				<?php wp_list_categories('&title_li='); ?>
 			</ul>
