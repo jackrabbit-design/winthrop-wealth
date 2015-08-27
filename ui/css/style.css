@@ -875,19 +875,19 @@ section.full-bio article a.btn{margin: 10px 0;}
 
 section.open { display: block; height: 100%; border-bottom: 1px solid #cdcdcd; opacity: 1; }
 
-section.blog-filter { width: 960px; margin: 0 auto 30px; padding: 20px 0 0; border-bottom: 1px solid #cdcdcd; }
+section.blog-filter { width: 960px; margin: 0 auto 30px; padding: 20px 0 0; border-top: 1px solid #cdcdcd; }
 
 section.blog-filter h3{display: inline-block; font-size: 26px; margin: 0 15px 0 0;}
 
-section.blog-filter ul{display: inline-block;  }
+section.blog-filter ul{display: block; text-align: center; text-align: center;}
 
 section.blog-filter ul li{display: inline-block; margin: 0 3px 0 0; }
 
 section.blog-filter ul li.current-cat a{color: #fff; background: #566c11; border: 1px solid #566c11;}
 
-section.blog-filter ul li a{padding: 10px 20px; border: 1px solid rgba(0,0,0,.25); border-bottom: none; display: block; color: #566c11; background: transparent;}
+section.blog-filter ul li a{padding: 10px 20px; border: 1px solid rgba(0,0,0,.25); display: block; color: #566c11; background: transparent;}
 
-section.blog-filter ul li a:hover{color: #fff; background: #566c11; border: 1px solid #566c11; border-bottom: none;}
+section.blog-filter ul li a:hover{color: #fff; background: #566c11; border: 1px solid #566c11; }
 
 section.blog-filter form { text-align: center; }
 

@@ -56,9 +56,24 @@ jQuery(function($) {
 	});
 	
 
+	$('.blog-filter ul li a').on('click', function(e){
+		e.preventDefault();
+		var $content = $('.query-results');
+		var $myLink = $(this).attr('href');
+		$($content).addClass('loading');
+		$.post($myLink+'', function(data){
+			var $new_content = $('.query-result').append(data).find($content).html();
+                $($content).html($new_content); // Append the new content
+		},'html').done(function(){
+                $($content).removeClass('loading');
+                
+        });
+	});
 
 
 });
+
+
 $(document).scroll(function() {
 	if ($('.block').isOnScreen() === true) {
 		$('.animated .animated-row .block').addClass('go');
