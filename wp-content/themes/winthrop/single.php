@@ -13,10 +13,15 @@
     </div>
     <section class="main blog clearfix">
 	    <div class="social-icons">
-		    <span class='st_twitter_large' displayText='Tweet'></span>
+		<a target="_blank" href="https://twitter.com/intent/tweet?text=<?php the_title(); ?>&url=<?php the_permalink(); ?>"><i class="social-twitter"></i></a>
+		<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="social-facebook"></i></a>
+		<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=<?php echo get_the_excerpt(); ?>&source=<?php the_permalink(); ?>"><i class="social-linkedin"></i></a>
+		<a target="_blank" href="mailto:?subject=<?php the_title(); ?>">share</a>
+
+		    <!-- <span class='st_twitter_large' displayText='Tweet'></span>
 		    <span class='st_facebook_large' displayText='Facebook'></span>
 			<span class='st_linkedin_large' displayText='LinkedIn'></span>
-			<span class='st_sharethis_large' displayText='ShareThis'></span>
+			<span class='st_sharethis_large' displayText='ShareThis'></span> -->
 	    </div>
         <article>
         <div class="blog-title">
@@ -26,10 +31,16 @@
 		<?php the_content(); ?>
 		
 		<div class="social-mobile">
+		<a class="btn-social twitter" target="_blank" href="https://twitter.com/intent/tweet?text=YOUR-TITLE&url=YOUR-URL&via=TWITTER-HANDLE">Share on Twitter</a>
+<a class="btn-social facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=YOUR-URL">Share on Facebook</a>
+<a class="btn-social google" target="_blank" href="https://plus.google.com/share?url=YOUR-URL">Share on Google+</a>
+<a class="btn-social linkedin" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=YOUR-URL&title=YOUR-TITLE&summary=YOUR-SUMMARY&source=YOUR-URL">Share on LinkedIn</a>
+<a class="btn-social pinterest" target="_blank" href="http://pinterest.com/pin/create/button/?url=YOUR-URL&description=YOUR-DESCRIPTION&media=YOUR-IMAGE-SRC">Pin on Pinterest</a>
+		<!-- 
 		    <span class='st_twitter_large' displayText='Tweet'></span>
 		    <span class='st_facebook_large' displayText='Facebook'></span>
 			<span class='st_linkedin_large' displayText='LinkedIn'></span>
-			<span class='st_sharethis_large' displayText='ShareThis'></span>
+			<span class='st_sharethis_large' displayText='ShareThis'></span> -->
 	    </div>
             
         </article>
