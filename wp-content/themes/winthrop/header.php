@@ -38,7 +38,7 @@
 				        </form>
 				    </div>
 			    <div class="login">
-					<a href="<?php the_field('client_login', $o); ?>">client login</a>
+					<a target="_blank" href="<?php the_field('client_login', $o); ?>">client login</a>
 				</div>
 				
         	</div>

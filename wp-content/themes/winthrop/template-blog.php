@@ -29,13 +29,7 @@
 
 	
 
-	   <?php /*if($terms = get_terms('category')) : 
-	   	foreach ($terms as $term) {
-	   		echo $term->name;
-	   	}
-	
-		
-		<?php endif; */?>
+	  
 	    <div id="everyblog">
 	    <?php $i = 1; $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;   query_posts(array('post_type'=> 'post', 'posts_per_page'=> 6, 'order_by' => 'date', 'paged' => $paged, 'offset' => 1)); if(have_posts()): $count = 1; ?>
 	    <ul class="clearfix query-results">
@@ -43,9 +37,9 @@
 	 
 	  
 		    <li <?php // if($i % 2) { echo'class="even"'; } else { echo 'class="odd"'; } ?>>
-		    <?php $img_id = get_post_thumbnail_id($post->ID); // This gets just the ID of the img
-$image = wp_get_attachment_image_src($img_id, 'blog-size'); // Get URL of the image, and size can be set here too (same as with get_the_post_thumbnail, I think)
-$alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
+		    <?php $img_id = get_post_thumbnail_id($post->ID); 
+						$image = wp_get_attachment_image_src($img_id, 'blog-size');
+						$alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
 		    	<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>"/>
 		    	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 		    	<?php the_category(', '); ?> | <time><?php echo get_the_date('F j');  echo'th, '; echo get_the_date('Y'); ?></time>

@@ -9,9 +9,8 @@
 		<small>What is the Story Behind</small>
 			Winthrop Wealth Management? 
 		</h1>
-		<div class="animated-hero">
-			
-			
+
+		<div class="animated-hero desktop">
 			<img src="<?php bloginfo('url'); ?>/ui/images/people-row-2.png" class="people people-row-2"/>
 			<img src="<?php bloginfo('url'); ?>/ui/images/people-row-1.png" class="people people-row-1"/>
 			<img src="<?php bloginfo('url'); ?>/ui/images/heart.png" class="heart animated"/>
@@ -21,6 +20,23 @@
 			<img src="<?php bloginfo('url'); ?>/ui/images/pie-2.png" class="pie-2 animated"/>
 			<img src="<?php bloginfo('url'); ?>/ui/images/line.png" class="heart-2 animated"/>
 		</div>
+		
+		<div class="animated-hero tablet">
+			<img src="<?php bloginfo('url'); ?>/ui/images/tablet/people-1.png" class="people people-row-2"/>
+			<img src="<?php bloginfo('url'); ?>/ui/images/tablet/people-2.png" class="people people-row-1"/>
+			<img src="<?php bloginfo('url'); ?>/ui/images/heart.png" class="heart animated"/>
+			<img src="<?php bloginfo('url'); ?>/ui/images/pie.png" class="pie animated"/>
+			<img src="<?php bloginfo('url'); ?>/ui/images/bar.png" class="bar animated"/>
+		</div>
+		
+		<div class="animated-hero mobile">
+			<img src="<?php bloginfo('url'); ?>/ui/images/mobile/people-lg.png" class="people people-row-1"/>
+			<img src="<?php bloginfo('url'); ?>/ui/images/heart.png" class="heart animated"/>
+			<img src="<?php bloginfo('url'); ?>/ui/images/pie.png" class="pie animated"/>
+			<img src="<?php bloginfo('url'); ?>/ui/images/bar.png" class="bar animated"/>
+		
+		</div>
+
 		<div class="content">
 			<h3>We are Problem Solver</h3>
 			<p>We help our clients lead happier lives by empowering them to become knowledgeable and active stewards of their financial resources. We remove a lot of the complexity that is associated with the ﬁnancial world. We keep it simple and focus on long-term results and solutions.</p>
