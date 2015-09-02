@@ -33,7 +33,7 @@
 			<img src="<?php bloginfo('url'); ?>/ui/images/mobile/people-lg.png" class="people people-row-1"/>
 			<img src="<?php bloginfo('url'); ?>/ui/images/heart.png" class="heart animated"/>
 			<img src="<?php bloginfo('url'); ?>/ui/images/pie.png" class="pie animated"/>
-			<img src="<?php bloginfo('url'); ?>/ui/images/bar.png" class="bar animated"/>
+			
 		
 		</div>
 

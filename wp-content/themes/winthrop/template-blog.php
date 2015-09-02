@@ -1,6 +1,9 @@
 <?php /*Template Name: Blog Landing */ get_header(); the_post(); ?>
    <main class="blog">
-    <?php $p = 1; query_posts(array('post_type'=> 'post', 'posts_per_page'=> 1, 'order_by' => 'date')); if(have_posts()): while(have_posts()) : the_post(); ?>
+    <?php $p = 1; 
+    query_posts(array('post_type'=> 'post', 'posts_per_page'=> 1, 'order_by' => 'date')); if(have_posts()): while(have_posts()) : the_post(); 
+    $exMe = $post->ID;  
+    ?>
 <?php if(get_the_post_thumbnail()) { $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'inner-banner'); ?>
 <div class="inner-header" style="background: url(<?php echo $image[0]; ?>) no-repeat center center;">
 <?php } else { $di = get_field('default_interior_banner','option'); ?>
@@ -31,7 +34,8 @@
 
 	  
 	    <div id="everyblog">
-	    <?php $i = 1; $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;   query_posts(array('post_type'=> 'post', 'posts_per_page'=> 6, 'order_by' => 'date', 'paged' => $paged, 'offset' => 1)); if(have_posts()): $count = 1; ?>
+	    <?php $i = 1; $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;   
+	    query_posts(array('post_type'=> 'post', 'posts_per_page'=> 6, 'order_by' => 'date', 'paged' => $paged, 'post__not_in' => array( $exMe ))); if(have_posts()): $count = 1; ?>
 	    <ul class="clearfix query-results">
 	    <?php while(have_posts()) : the_post(); ?>
 	 
@@ -50,7 +54,7 @@
 	    </ul>
 	    
 	    <div class="loadmore">
-			<?php next_posts_link( 'Loan More' ); ?>
+			<?php next_posts_link( 'Load More' ); ?>
 		</div>
 		<?php else: ?>
 		

@@ -110,17 +110,30 @@
 				<a href="/our-story/" class="btn green">Our Story</a>
 				</div>
 			<div class="wrapper">
-			
-					<div class="animated-hero">
-						<img src="<?php bloginfo('url'); ?>/ui/images/people-row-2.png" class="people people-row-2"/>
-						<img src="<?php bloginfo('url'); ?>/ui/images/people-row-1.png" class="people people-row-1"/>
-						<img src="<?php bloginfo('url'); ?>/ui/images/heart.png" class="heart animated"/>
-						<img src="<?php bloginfo('url'); ?>/ui/images/pie.png" class="pie animated"/>
-						<img src="<?php bloginfo('url'); ?>/ui/images/bar.png" class="bar animated"/>
-						<img src="<?php bloginfo('url'); ?>/ui/images/money.png" class="money animated"/>
-						<img src="<?php bloginfo('url'); ?>/ui/images/pie-2.png" class="pie-2 animated"/>
-						<img src="<?php bloginfo('url'); ?>/ui/images/line.png" class="heart-2 animated"/>
-					</div>
+				<div class="animated-hero desktop">
+					<img src="<?php bloginfo('url'); ?>/ui/images/people-row-2.png" class="people people-row-2"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/people-row-1.png" class="people people-row-1"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/heart.png" class="heart animated"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/pie.png" class="pie animated"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/bar.png" class="bar animated"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/money.png" class="money animated"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/pie-2.png" class="pie-2 animated"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/line.png" class="heart-2 animated"/>
+				</div>
+				
+				<div class="animated-hero tablet">
+					<img src="<?php bloginfo('url'); ?>/ui/images/tablet/people-1.png" class="people people-row-2"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/tablet/people-2.png" class="people people-row-1"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/heart.png" class="heart animated"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/pie.png" class="pie animated"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/bar.png" class="bar animated"/>
+				</div>
+				
+				<div class="animated-hero mobile">
+					<img src="<?php bloginfo('url'); ?>/ui/images/mobile/people-lg.png" class="people people-row-1"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/heart.png" class="heart animated"/>
+					<img src="<?php bloginfo('url'); ?>/ui/images/pie.png" class="pie animated"/>
+				</div>
 			</div>
 
 		
@@ -146,19 +159,14 @@
 
 				        <div class="wrap clearfix">
 				            <div class="blog-head clearfix">
-				            		<?php
-					$terms = get_the_terms( $post->ID, 'category' );
-
-					if ( $terms && ! is_wp_error( $terms ) ) : 
-
-					$draught_links = array();
-
-					foreach ( $terms as $term ) {
-					$draught_links[] = $term->name;
-					}
-
-					$on_draught = join( ", ", $draught_links );
-					?>
+				            		<?php 
+				            			$terms = get_the_terms( $post->ID, 'category' );
+										if ( $terms && ! is_wp_error( $terms ) ) : 
+										$draught_links = array();
+										foreach ( $terms as $term ) {
+											$draught_links[] = $term->name;
+										}
+										$on_draught = join( ", ", $draught_links ); ?>
 				                <h2><?php echo $on_draught; ?></h2>
 				                <?php endif; ?>
 				                <div class="cycle-pager"></div>

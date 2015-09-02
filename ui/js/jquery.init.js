@@ -111,8 +111,9 @@ $(document).scroll(function() {
         // });
 
         // if transform3d isn't available, use top over background-position
-        $('.inner-header').css('background-position-y', -Math.ceil(n/4) + 'px');
-
+      	 if ($(window).width() > 768) {
+      		$('.inner-header').css('background-position-y', -Math.ceil(n/4) + 'px');
+   		 }
         $('.banner-img').css('background-position-y', -Math.ceil(n/6) + 'px');
 });
 
