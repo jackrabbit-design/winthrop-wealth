@@ -139,12 +139,12 @@
 		
 	</section>
 	
-	<?php query_posts(array('posts_type' => 'posts', 'posts_per_page' => 3 )); if(have_posts()) : ?>
+	<?php ?>
 
 	<section class="from-the-blog">
 
 		<div id="blog-slider">
-			<?php while(have_posts()) : the_post(); ?>
+			<?php query_posts(array('posts_type' => 'posts', 'posts_per_page' => 1, 'cat' => '1' )); if(have_posts()) : while(have_posts()) : the_post(); ?>
 			<div>
 				<?php 
 						$img_id = get_post_thumbnail_id($post->ID); 
@@ -180,9 +180,91 @@
 				        </div>
 				    </div>
 			</div>
-		<?php endwhile; ?>
+		<?php endwhile; endif; wp_reset_query(); ?>
+		<?php query_posts(array('posts_type' => 'posts', 'posts_per_page' => 1,'cat' => '8'  )); if(have_posts()) : while(have_posts()) : the_post(); ?>
+			<div>
+				<?php if(!get_field('hide_banner')){
+						$img_id = get_post_thumbnail_id($post->ID); 
+						$image = wp_get_attachment_image_src($img_id, 'home-blog-large');
+						$imageMob = wp_get_attachment_image_src($img_id, 'home-blog-mobile');
+						$alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
+				<div class="blog-photo" style="background: url('<?php echo $image[0]; ?>'); ">
+					<img src='<?php echo $imageMob[0]; ?>' alt="<?php echo $alt_text; ?>"/>
+					<?php } else { 
+							$imaged = get_field('default_interior_banner','options'); 
+						?>
+
+
+						<div class="blog-photo" style="background: url('<?php echo $imaged['sizes']['home-blog-large']; ?>'); ">
+					<img src='<?php echo $imaged['sizes']['home-blog-mobile']; ?>' />
+					<?php } ?>
+				</div>
+				<div class="blog-text">
+				
+
+				        <div class="wrap clearfix">
+				            <div class="blog-head clearfix">
+				            		<?php 
+				            			$terms = get_the_terms( $post->ID, 'category' );
+										if ( $terms && ! is_wp_error( $terms ) ) : 
+										$draught_links = array();
+										foreach ( $terms as $term ) {
+											$draught_links[] = $term->name;
+										}
+										$on_draught = join( ", ", $draught_links ); ?>
+				                <h2><?php echo $on_draught; ?></h2>
+				                <?php endif; ?>
+				                <div class="cycle-pager"></div>
+				            </div>
+				            <h4><?php the_title(); ?></h4>
+				            <div class="meta">
+				                <a href="#economics">Economics</a> <time><?php the_time('F'); ?> <?php the_time('j'); ?>th, <?php the_time('Y'); ?></time>
+				            </div>
+				            <p><?php echo wp_trim_words( get_the_excerpt(), 40, '...' ); ?></p>
+				            <a href="" class="read-more">Read More</a>
+				        </div>
+				    </div>
+			</div>
+		<?php endwhile; endif; wp_reset_query(); ?>
+		<?php query_posts(array('posts_type' => 'posts', 'posts_per_page' => 1,'cat' => '3'  )); if(have_posts()) : while(have_posts()) : the_post(); ?>
+			<div>
+				<?php 
+						$img_id = get_post_thumbnail_id($post->ID); 
+						$image = wp_get_attachment_image_src($img_id, 'home-blog-large');
+						$imageMob = wp_get_attachment_image_src($img_id, 'home-blog-mobile');
+						$alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
+				<div class="blog-photo" style="background: url('<?php echo $image[0]; ?>'); ">
+					<img src='<?php echo $imageMob[0]; ?>' alt="<?php echo $alt_text; ?>"/>
+				</div>
+				<div class="blog-text">
+				
+
+				        <div class="wrap clearfix">
+				            <div class="blog-head clearfix">
+				            		<?php 
+				            			$terms = get_the_terms( $post->ID, 'category' );
+										if ( $terms && ! is_wp_error( $terms ) ) : 
+										$draught_links = array();
+										foreach ( $terms as $term ) {
+											$draught_links[] = $term->name;
+										}
+										$on_draught = join( ", ", $draught_links ); ?>
+				                <h2><?php echo $on_draught; ?></h2>
+				                <?php endif; ?>
+				                <div class="cycle-pager"></div>
+				            </div>
+				            <h4><?php the_title(); ?></h4>
+				            <div class="meta">
+				                <a href="#economics">Economics</a> <time><?php the_time('F'); ?> <?php the_time('j'); ?>th, <?php the_time('Y'); ?></time>
+				            </div>
+				            <p><?php echo wp_trim_words( get_the_excerpt(), 40, '...' ); ?></p>
+				            <a href="" class="read-more">Read More</a>
+				        </div>
+				    </div>
+			</div>
+		<?php endwhile; endif; wp_reset_query(); ?>
 		</div>
-	<?php endif; ?>
+	<?php ?>
 	</section>
 
 <?php get_footer(); ?>

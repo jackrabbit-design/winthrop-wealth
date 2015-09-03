@@ -586,16 +586,18 @@ p { font: 200 14px/24px "proxima_nova", sans-serif; margin: 15px 0; }
 
 #contact-detail .row-one p br { display: none; }
 
-.no-banner{max-width: 960px; width: 100%; margin: 40px auto; padding: 0 20px;}
+.no-banner{padding: 40px 20px; background: rgb(91, 113, 21); color: #fff;}
 
-.logo-banner{display: block; margin: 0 10px;}
+.no-banner .title-wrap{max-width: 960px; width: 100%; margin: 0 auto 0; }
+
+.logo-banner{display: block; margin: 0 0 13px;}
 
 .inner-header { height: 380px; width: 100%; position: relative; overflow: hidden; background-size: 100% !important;}
 
 .inner-header .title-wrap h1.page-title, .inner-header .title-wrap h2.page-title { text-align: center;color: #fff; background: rgba(97, 121, 20, 0.9); display: inline-block; font-size: 34px;position: absolute; bottom: 35px; padding: 10px 30px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transfomr: translateX(-50%);}
 
 /*Interior*/
-.blog-title h1 { font: 30px/32px "aleo", serif; color: #000; }
+section.main .blog-title h1 { font: 30px/32px "aleo", serif; color: #000; margin: 0 0 15px;}
 
 .blog-title a { font-weight: normal; color: #959595; font-size: 15px; font-family: 'proxima_nova'; }
 
@@ -2159,8 +2161,12 @@ section.main .social-icons a:hover{color: #566C11}
   section.main aside .side-blog { width: 48%; display: block; vertical-align: top; float: right; margin: 0 0 20px 0; }
   section.main { padding: 0; width: auto; margin: 25px auto 0; }
   section.main article { width: auto; padding: 0 20px 20px; float: none; display: block; }
+  section.blog.main{padding: 0;}
+  section.blog.main article{left: auto; position: static; width: auto;}
+  .logo-banner{width: 100%; height: auto;}
   section.main .side-wrapper { background: #f9f9f9; padding: 0 20px; }
   section.main aside { width: auto; float: none; padding: 20px 0; display: block; }
+  section.blog.main aside{width: auto;}
   section.main aside .extra-content { margin: 0 0 0 0; padding: 0 10px; }
   section.main aside nav.side { width: 100%; vertical-align: top; display: block; float: left; }
   section.main aside .side-blog { width: 100%; display: block; vertical-align: top; float: right; margin: 0 0 20px 0; }

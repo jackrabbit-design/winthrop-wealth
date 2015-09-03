@@ -12,9 +12,9 @@ if(get_field('hide_banner')) { ?>
 
 
     <div class="no-banner">
-		
+		 <div class="title-wrap">
 	        <h2 class="page-title"><?php echo $CatName; ?></h2>
-		
+		</div>
 	</div>
 
   <?php } else { ?>
@@ -38,7 +38,7 @@ if(get_field('hide_banner')) { ?>
 			<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=<?php echo get_the_excerpt(); ?>&source=<?php the_permalink(); ?>"><i class="social-linkedin"></i></a>
 			<a href="mailto:?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>">share</a>
 	    </div>
-        <article>
+        <article class="clearfix">
         <div class="blog-title">
      	  <h1><?php the_title(); ?></h1>
      	 <?php if(get_field('hide_banner')) { ?>
