@@ -32,13 +32,16 @@
 			                <a href="<?php echo $outLink; ?>" target="_blank" class="banner-link">LEARN MORE</a>
 			                <?php } ?>  
 			            </div>
-			            <div class="banner-pager"></div>
+			            
 			        </div>
 			    </div>
 			
 			</li>
 			<?php $c++; endwhile; ?>
 			</ul>
+			<div class="pager-container">
+				<div class="banner-pager"></div>
+			</div>
 		<?php endif; ?>
 		
 	</div>
@@ -173,10 +176,10 @@
 				            </div>
 				            <h4><?php the_title(); ?></h4>
 				            <div class="meta">
-				                <a href="#economics">Economics</a> <time><?php the_time('F'); ?> <?php the_time('j'); ?>th, <?php the_time('Y'); ?></time>
+				                <time><?php the_time('F'); ?> <?php the_time('j'); ?>th, <?php the_time('Y'); ?></time>
 				            </div>
 				            <p><?php echo wp_trim_words( get_the_excerpt(), 40, '...' ); ?></p>
-				            <a href="" class="read-more">Read More</a>
+				            <a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
 				        </div>
 				    </div>
 			</div>
@@ -218,10 +221,10 @@
 				            </div>
 				            <h4><?php the_title(); ?></h4>
 				            <div class="meta">
-				                <a href="#economics">Economics</a> <time><?php the_time('F'); ?> <?php the_time('j'); ?>th, <?php the_time('Y'); ?></time>
+				            <time><?php the_time('F'); ?> <?php the_time('j'); ?>th, <?php the_time('Y'); ?></time>
 				            </div>
 				            <p><?php echo wp_trim_words( get_the_excerpt(), 40, '...' ); ?></p>
-				            <a href="" class="read-more">Read More</a>
+				            <a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
 				        </div>
 				    </div>
 			</div>
@@ -255,10 +258,10 @@
 				            </div>
 				            <h4><?php the_title(); ?></h4>
 				            <div class="meta">
-				                <a href="#economics">Economics</a> <time><?php the_time('F'); ?> <?php the_time('j'); ?>th, <?php the_time('Y'); ?></time>
+				               <time><?php the_time('F'); ?> <?php the_time('j'); ?>th, <?php the_time('Y'); ?></time>
 				            </div>
 				            <p><?php echo wp_trim_words( get_the_excerpt(), 40, '...' ); ?></p>
-				            <a href="" class="read-more">Read More</a>
+				            <a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
 				        </div>
 				    </div>
 			</div>

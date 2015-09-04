@@ -45,13 +45,15 @@ jQuery(function($) {
 		slides: '> div',
 		pager: '.cycle-pager',
 		swipe: true,
+		//autoHeight: true,
 		pagerTemplate: '<span></span>'
 	}).cycle('pause');
 
 	$('#homeSlider').cycle({
 		slides: '> li',
-		fx: 'scrollHorz',
+		fx: 'fade',
 		pager: '.banner-pager',
+		autoHeight: 'container',
 		swipe: true,
 		pagerTemplate: '<span></span>'
 	}).on('cycle-after', function(event,opts){
