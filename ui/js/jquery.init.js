@@ -25,7 +25,7 @@ jQuery(function($) {
 	});
 	
 
-	$.stellar({horizontalScrolling: false});
+	$.stellar({horizontalScrolling: false,responsive: true });
 	
 	
 	$('section.main .cornerstones li').on('click',function(){
@@ -52,7 +52,7 @@ jQuery(function($) {
 	$('#homeSlider').cycle({
 		slides: '> li',
 		fx: 'fade',
-		
+		timeout: 0,
 		pager: '.banner-pager',
 		autoHeight: 'container',
 		swipe: true,

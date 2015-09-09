@@ -6,22 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="MSSmartTagsPreventParsing" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no target-densitydpi=device-dpi" />
     <title><?php wp_title(); ?></title>
-<!-- 	<link type="text/css" rel="stylesheet" media="all" href="<?php bloginfo('url'); ?>/ui/css/style.css" /> -->
 	<?php if(is_page_template('template-cal.php')) { ?>
 	<link type="text/css" rel="stylesheet" media="all" href="<?php bloginfo('url'); ?>/ui/css/calculator.css" />
 	<?php } ?>
-<!--
-	<?php if(is_page_template('template-animated.php')) { ?>
-	<link type="text/css" rel="stylesheet" media="all" href="<?php bloginfo('url'); ?>/ui/css/animated.css" />
-	<?php } ?>
--->
-	
     <link type="text/plain" rel="author" href="<?php bloginfo('url'); ?>/authors.txt" />
     <?php echo get_template_part('icons'); ?>
 	<?php wp_head(); ?>
+	 <!--[if lte IE 9]><link type="text/css" rel="stylesheet" media="all" href="<?php bloginfo('url'); ?>/ui/css/ie.css" /><![endif]-->
 </head>
 <body <?php body_class(); ?>>
-    <!--[if lte IE 7]><iframe src="unsupported.html" frameborder="0" scrolling="no" id="no_ie6"></iframe><![endif]-->
+    <!--[if lte IE 8]><iframe src="unsupported.html" frameborder="0" scrolling="no" id="no_ie6"></iframe><![endif]-->
 	<header id="header">
     	<div class="container">
         	<div class="header-inner clearfix">
@@ -64,27 +58,6 @@
                                 </form>
                             </div>
                         </div><!--search-wrap-->
-              
-                        <!--<div class="pull-left" id="header-search">
-                            
-                            
-                                <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-                                            <input type="text" placeholder="Search" name="s" />
-                                            <span class="theme-search-icon search-icon visible-s"></span>
-                                </form>
-                         
-                        </div>search-wrap-->
-                        
-                       <!-- <div class="login">
-                        	<a href="<?php the_field('client_login', $o); ?>">client login</a>
-                             <div class="pull-left" id="header-search">
-                                 <div class="search-input-wrap">
-                                <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-                                            <input type="text" placeholder="Search" name="s" />
-                                            <span class="theme-search-icon search-icon visible-s"></span>
-                                </form>
-                            </div>
-                        </div>search-wrap-->
                         </div>
                     </div>
                 </div> <!--header-col-two-->

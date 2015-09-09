@@ -1,0 +1,23 @@
+#slider .banner-inner{opacity: 1; padding-left: 100%;}
+#slider .banner-pager{opacity: 1; padding-left: 100%; }
+.animated-hero img{opacity: 1 !important;}
+.animated-hero .heart{left: 48px; top: 104px; opacity: 1; }
+.animated-hero .heart-2{ right: 460px;  top: -21px; opacity: 1; }
+.animated-hero .money{ right: 258px;  top: -7px;opacity: 1; }
+.animated-hero .pie{left: 140px; top: -20px;opacity: 1;}
+.animated-hero .bar{right: 74px; top: 34px; opacity: 1;}
+.animated-hero .pie-2{ top: 104px; right: 362px; opacity: 1;}
+.animated-hero .people-row-1{  left: 170px; bottom: 0; opacity: 1; }
+.animated-hero .people-row-2{left: 110px;  bottom: 81px; opacity: 1; }
+.loader{display: none;}
+.animated-row .block{opacity: 1 !important;}
+.animated-row .block img{opacity: 1 !important;}
+.animated-row .block .gray-arrow{opacity: 1 !important;}
+.animated-row .block .gray-arrow span{opacity: 1 !important;}
+.animated-row .block .gray-arrow:after{opacity: 1 !important;}
+.animated-row .block .animated-text{opacity: 1 !important;}
+
+@media screen and (max-width: 1080px) { 
+#slider .banner-inner{padding: 30px 30px 30px; left: auto;}
+#slider .banner-pager{padding: 30px 30px 30px; left: auto;}
+}

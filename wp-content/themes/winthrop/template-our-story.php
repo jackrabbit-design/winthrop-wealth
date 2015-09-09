@@ -254,7 +254,7 @@
 	</div>
 	<div class="row even">
 	<div class="parallax-window">
-	<img src="<?php bloginfo('url'); ?>/ui/images/accesible.png" width="1224" height="426"  data-stellar-ratio="1.25"   data-stellar-offset-parent="true" class="city"/>   <!-- data-stellar-horizontal-offset="0" data-stellar-vertical-offset="75"  -->
+	<img src="<?php bloginfo('url'); ?>/ui/images/accesible.png" width="1224" height="426"  data-stellar-ratio="1.25"  data-stellar-vertical-offset="300" class="city"/>   <!-- data-stellar-horizontal-offset="0" data-stellar-vertical-offset="75"  -->
 	</div>
 		<div class="wrapper">
 		
