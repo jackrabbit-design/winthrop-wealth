@@ -7,7 +7,8 @@
 			    <?php the_content(); ?>
 		    </div>
 	    </section>
-	    <section class="full-bio"></section>
+	    <?php //<img src="/ui/images/ring-alt.gif" class="loading" style="display: none;"/> ?>
+	    <section id="team-bio" class="full-bio"></section>
 		<?php 
 			query_posts(array('post_type' => 'team-member', 'post_per_page' => -1)); 
 			if(have_posts()) :

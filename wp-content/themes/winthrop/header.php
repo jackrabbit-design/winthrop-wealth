@@ -19,16 +19,13 @@
     <link type="text/plain" rel="author" href="<?php bloginfo('url'); ?>/authors.txt" />
     <?php echo get_template_part('icons'); ?>
 	<?php wp_head(); ?>
-	<!--<script type="text/javascript">var switchTo5x=true;</script>
-	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript">stLight.options({publisher: "cd2bc686-4dc4-4476-ac6c-41222b964bc7", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>-->
 </head>
 <body <?php body_class(); ?>>
     <!--[if lte IE 7]><iframe src="unsupported.html" frameborder="0" scrolling="no" id="no_ie6"></iframe><![endif]-->
 	<header id="header">
     	<div class="container">
         	<div class="header-inner clearfix">
-        	<div class="top-header">
+        	<div class="top-header clearfix">
         		
 				
 				 <div class="search-input-wrap">

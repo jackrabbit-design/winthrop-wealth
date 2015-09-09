@@ -35,7 +35,7 @@
 	    
 	    
 	    	    <div class="loadmore">
-			<?php next_posts_link( 'Loan More' ); ?>
+			<?php next_posts_link( 'Load More' ); ?>
 		</div>
 		<?php else : ?>
 		<h3>Sorry we couldn't find anything.</h3>

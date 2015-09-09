@@ -244,7 +244,7 @@
 	<div class="row">
 		<div class="wrapper">
 		<div class="parallax-window">
-			<img src="<?php bloginfo('url'); ?>/ui/images/family-friendly.png" width="312" height="252"  data-stellar-ratio="1.25" data-stellar-vertical-offset="30"   />   <!-- data-stellar-horizontal-offset="75" data-stellar-vertical-offset="10"  -->
+			<img src="<?php bloginfo('url'); ?>/ui/images/family-friendly.png" width="312" height="252"  data-stellar-ratio="1.25" data-stellar-vertical-offset="60"   />   <!-- data-stellar-horizontal-offset="75" data-stellar-vertical-offset="10"  -->
 		</div>
 			<div class="content">
 				<h3>Family Friendly</h3>
@@ -273,7 +273,7 @@
 	<div class="wrapper">
 		<h2>Our Story is just beginning</h2>
 		<p>We are committed to growing our business for the benefit of our clients. That means, taking Winthrop Wealth Management into the next generation by providing our clients best in class expertise, unrivalled service, and continuity.  Our multi-generational team is working every day to deliver on our mission of excellence.</p>
-		<a href="" class="btn green">GET STARTED WITH US</a>
+		<a href="<?php echo get_permalink(76); ?>" class="btn green">GET STARTED WITH US</a>
 	</div>
 </section>
 

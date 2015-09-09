@@ -52,6 +52,7 @@ jQuery(function($) {
 	$('#homeSlider').cycle({
 		slides: '> li',
 		fx: 'fade',
+		
 		pager: '.banner-pager',
 		autoHeight: 'container',
 		swipe: true,
@@ -116,7 +117,7 @@ $(document).scroll(function() {
       	 if ($(window).width() > 768) {
       		$('.inner-header').css('background-position-y', -Math.ceil(n/4) + 'px');
    		 }
-        $('.banner-img').css('background-position-y', -Math.ceil(n/6) + 'px');
+        //$('.banner-img').css('background-position-y', -Math.ceil(n/6) + 'px');
 });
 
 function _visibleSearch() {
@@ -241,13 +242,15 @@ function _accordians() {
 	var allPanels = $('.accordion > dd').hide();
 	// openFirstPanel();
 	$('.accordion > dt > a').click(function() {
+
 		$this = $(this);
 		$that = $('.accordion dt a');
 		$target = $this.parent().next();
+
 		if ($target.hasClass('active')) {
 			$target.removeClass('active').slideUp();
 		} else {
-			allPanels.removeClass('active').slideUp();
+			//allPanels.removeClass('active').slideUp();
 			$target.addClass('active').slideDown();
 		}
 		if ($this.hasClass('active')) {
@@ -271,9 +274,16 @@ function _teamDesktop() {
 		} else {
 			$(this).removeClass('open');
 			$(this).addClass('open');
+			//$('.loading').css('display', 'block');
+
+			 $('html, body').animate({
+        		scrollTop: $("#team-bio").offset().top
+    		}, 2000);
+
 			$('.full-bio').load('team-member/' + url + '/ #info', function() {
 				$(this).hide();
 				$(this).fadeIn(200);
+				//$('.loading').css('display', 'none');
 				//$('.biography').jScrollPane();
 				$('button.close-bio').click(function() {
 					$(this).parent().parent('.full-bio').removeClass('open');

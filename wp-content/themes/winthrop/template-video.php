@@ -9,7 +9,7 @@
 	    </section>
  <section class="video-list clearfix full-list">
 
-		    <?php $video = 1; query_posts(array('post_type'=> 'video', 'posts_per_page' => 2)); if(have_posts()) : while(have_posts()) : the_post(); ?>
+		    <?php $video = 1; query_posts(array('post_type'=> 'video', 'posts_per_page' => -1)); if(have_posts()) : while(have_posts()) : the_post(); ?>
 		    
 		    <article class="video <?php if($video % 2 ) { echo 'odd'; } else { echo 'even'; } ?>">
 				<a href="<?php the_field('video_url'); ?>?rel=0&amp;showinfo=0" class="video-thumb" style="background: url('http://img.youtube.com/vi/<?php the_field('video_id'); ?>/hqdefault.jpg') no-repeat center center;">
