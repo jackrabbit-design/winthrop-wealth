@@ -505,7 +505,9 @@ p { font: 200 14px/24px "proxima_nova", sans-serif; margin: 15px 0; }
 
 .column ul li .icon-content{display: inline-block; vertical-align: top; }
 
-.what-we-do .btn{ display: block; width: 130px; margin: 40px auto 0; text-align: center;}
+.what-we-do .btn{ display: block; width: 130px; margin: 40px auto 0; text-align: center; position: relative; left: -5px; background: #fff; color: #566c11;}
+
+.what-we-do .btn:hover{background: #8aad52; color: #fff;}
 
 .wealth-management{background: #fdfdfd; text-align: center; padding: 50px 0 20px;}
 
@@ -517,6 +519,8 @@ p { font: 200 14px/24px "proxima_nova", sans-serif; margin: 15px 0; }
 
 
  a.read-more{font: 700 14px/18px 'proxima_nova'; text-transform: uppercase; color: #fff;}
+
+ a.read-more:hover{text-decoration: underline;}
 
 .from-the-blog{min-height: 400px; position: relative; color: #fff;background: #8aad52;}
 
@@ -534,7 +538,7 @@ p { font: 200 14px/24px "proxima_nova", sans-serif; margin: 15px 0; }
 
 .from-the-blog .blog-text .wrap .meta a:hover{color: #fff;}
 
-.from-the-blog .blog-photo{width: 50%; height: 100%; position: absolute; right: 0;}
+.from-the-blog .blog-photo{width: 50%; height: 100%; position: absolute; right: 0; background-size: cover; background-repeat: no-repeat;}
 
 .from-the-blog .blog-photo img{display: none;}
 
@@ -732,7 +736,7 @@ section.main aside .side-blog a { color: #566c11; font-size: 15px; font-family: 
 
 section.main aside .side-blog a.readmore { font-weight: bold; margin: 15px 0px 0px; display: block; }
 
-section.main .location-row{display: block; width: 100%; border-bottom: 1px solid #e5e5e5; margin: 0 0 26px; padding: 0 0 20px;}
+section.main .location-row{display: block; width: 100%; border-bottom: 1px solid #e5e5e5; margin: 0 0 26px; padding: 0 20px; box-sizing:border-box;}
 
 section.main .location-row:last-child{border-bottom: none;}
 
@@ -757,6 +761,8 @@ section.main .cornerstones .circle:before{content: ''; height: 11px; width: 11px
 section.main .cornerstones .circle.active:before{background: #617914;}
 
 section.main .cornerstones h5{  font: 500 18px/24px 'proxima_nova', sans-serif; text-transform: none; margin: 0;}
+
+section.main .cornerstones h5:hover{color: #617914;}
 
 section.main .cornerstones .content{display: block; float: right;  vertical-align: top;    width: 90%;}
 
@@ -817,7 +823,7 @@ section.by-numbers ul li p{margin: 4px 0 0 0;color: #e4ccae; line-height: 16px;}
 
 /*Our Story*/
 
-main.team { width: 960px; margin: 0 auto; }
+main.team { width: 960px; margin: 0 auto; position: relative;}
 
 main.team ul { text-align: center; margin: 20px 0; }
 
@@ -829,7 +835,7 @@ main.team ul li div.info { width: 100%; height: 100%; position: absolute; backgr
 
 main.team ul li div.info a.social { display: none; }
 
-main.team ul li div.info h3 { font: 500 18px/22px 'aleo', serif; color: #fff; text-align: center; position: relative; top: 48px; }
+main.team ul li div.info h3 { font: 500 18px/22px 'aleo', serif; color: #fff; text-align: center; position: relative; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);}
 
 main.team ul li div.info h3 small { font: 300 13px/20px 'aleo', serif; display: block; }
 
@@ -877,9 +883,13 @@ section.intro p.blog-meta a:hover { color: #000; }
 
 /*section.intro .btn { margin: 15px 0 0; }*/
 
-section.full-bio { overflow: hidden;  position: relative; opacity: 0; height: 0; border-bottom: 1px solid #cdcdcd; }
+.loading{display: none; position: absolute; width: 100%; height: 100%; top: 0; left: 0;z-index: 1; background: #fff url(../images/loadmore.gif) no-repeat center center;}
 
-section.full-bio article { display: inline-block; width: 490px;  padding-bottom: 30px; padding-right: 10px; margin: 40px 10px 0; }
+.loading.now{display: block;}
+
+section.full-bio { overflow: hidden;  position: relative; opacity: 0; height: 0; border-bottom: 1px solid #cdcdcd;  border-top: 1px solid #cdcdcd; }
+
+section.full-bio article { display: inline-block; width: 490px; height: 500px; padding-bottom: 30px; padding-right: 10px; margin: 30px 10px 0; }
 
 section.full-bio article h3 { display: inline-block; width: 80%; font: 24px/30px 'aleo', serif; color: #617914; }
 
@@ -887,7 +897,7 @@ section.full-bio article h4 { display: inline-block; width: 80%; font: 500 20px/
 
 section.full-bio article p {    font: 200 16px/28px 'proxima_nova', sans-serif; color: #595959; margin: 15px 0; }
 
-section.full-bio .bio-image {display: inline-block; position: static; vertical-align: top; margin: 20px 0 0 98px; width: 280px; height: 535px; background: #fff; background-position: center bottom; background-repeat:  no-repeat; box-shadow: inset 1px 2px 20px rgba(0, 0, 0, 0.11); background-size: 84% }
+section.full-bio .bio-image {display: inline-block; position: absolute; vertical-align: top; margin: 20px 0 0 0; width: 280px; height: 535px; background: #fff; background-position: center bottom; background-repeat:  no-repeat; background-size: 84%; right: 10%; bottom: 0;}
 
 section.full-bio article a.btn{margin: 10px 0;}
 
@@ -980,7 +990,7 @@ section.video-list { width: 960px; margin: 0 auto; padding: 0 0 40px 0; }
 
 section.video-list.taxpage { margin: 40px auto 0; }
 
-section.video-list.full-list { margin: 30px auto 0; }
+section.video-list.full-list { margin: 20px auto 0; }
 
 section.video-list .wrapper { width: 760px; margin: 30px auto 40px; text-align: center; }
 
@@ -988,11 +998,11 @@ section.video-list .wrapper h2 { color: #566c11; font: normal 30px/36px "aleo", 
 
 section.video-list .wrapper p { font: normal 18px/28px "proxima_nova", sans-serif; color: #959595; }
 
-section.video-list .video { width: 450px; }
+section.video-list .video { width: 450px; display: inline-block; margin: 0 10px 40px; vertical-align: top;}
 
-section.video-list .video.even { float: right; }
+/*section.video-list .video.even { float: right; }
 
-section.video-list .video.odd { float: left; }
+section.video-list .video.odd { float: left; }*/
 
 section.video-list .video .video-excerpt { margin: 15px 0 5px 15px; }
 
@@ -1015,9 +1025,9 @@ section.video-list .wrapper .btn { margin: 40px auto 0; }
 
 .loader{width:100%;height:100%;background:#fff;position:absolute;top:0;left:0;z-index:99}
 .loader.go{z-index:-1}
-.animated{position:relative}
-.animated-row{margin-bottom:60px;display:block}
-.animated-row h4{font:bold 16px/18px proxima_nova,sans-serif;color:#566c11;margin:0 0 8px}
+section.main .animated{position:relative}
+section.main .animated-row{margin-bottom:60px;display:block}
+section.main .animated-row h4{font:bold 16px/18px proxima_nova,sans-serif;color:#566c11;margin:0 0 8px}
 section.main .animated-row p{font:13px/16px proxima_nova,sans-serif;margin:0 0 8px;color:#595959}
 
 
@@ -2328,6 +2338,8 @@ section.main .social-icons a:hover{color: #566C11}
  }
 /* 1025*/
 @media screen and (max-width: 980px) { #main-nav > ul > li > a { font-size: 16px; }
+
+.inner-header{background-size: cover !important;}
 	#slider{min-height: 1px;}
 	#slider li{height: 510px;}
 	.how-did .owl-theme .owl-buttons{display: none;}
@@ -2345,6 +2357,7 @@ section.main .social-icons a:hover{color: #566C11}
   section.blog.main article { width: 56.417%; position: relative; left: 30px; }
   section.blog.main aside { width: 30.208333333%; }
   section.blog.main aside .side-blog img { width: 100%; height: auto; }
+  section.full-bio .bio-image{right: 0;}
   .social-icons { margin: 20px 0px 0px -10px; position: relative; }
   main.blog ul.query-results { width: auto; margin: 0 auto; padding: 0 20px; }
   main.blog ul.query-results li { width: 46.145833333333%; }
@@ -2361,6 +2374,7 @@ section.main .social-icons a:hover{color: #566C11}
   section.video-list .wrapper { width: auto; }
   section.video-list .video { width: 46.875%; } 
 	#slider h1, #slider h2{    font-size: 24px; line-height: 28px;}
+	#slider .banner-link{width: auto; display: inline-block;     padding: 0 10px;}
 	.column ul li{min-height: 150px; text-align: center;}
 	.column ul li .icon{font-size: 72px; display: block; margin: 0 auto;}
 	.column ul li .icon-content{margin: 27px auto 0;}
@@ -2377,6 +2391,9 @@ section.main .social-icons a:hover{color: #566C11}
 @media screen and (max-width: 880px) { #main-nav > ul > li > a { font-size: 15px; padding: 0 10px; }
   #tabs section.tab-content article .content { width: 65.75%; } }
 /* 880*/
+
+
+
 @media screen and (max-width: 768px) { 
 
 h2{font: 30px/32px 'aleo', sans-serif;}
@@ -2384,7 +2401,7 @@ h2{font: 30px/32px 'aleo', sans-serif;}
 h4 { font: bold 18px/23px "proxima_nova", sans-serif; }
 
 
-
+	
 	.container-inner { padding: 0 20px; }
   .container-inner.int { padding: 0 20px; }
   .hidden-s { display: none !important; }
@@ -2432,12 +2449,16 @@ h4 { font: bold 18px/23px "proxima_nova", sans-serif; }
   #hm-blog .blog-sum span { font-size: 13px; margin-bottom: 10px; }
   #hm-blog .blog-sum p { font-size: 12px; line-height: 21px; }
   #hm-blog .blog-sum ul li { width: 100%; min-height: 0; }
+  #footer-nav{display: none;}
   #contact-detail { padding: 15px 0 15px; }
-  #contact-detail .contact { margin-bottom: 0; padding: 0; width: 100%; border-left: none;}
+  #contact-detail .contact { margin-bottom: 0; padding: 0; width: 100%; border-left: none; font-size: 0;}
   #contact-detail .contact h3 { margin-bottom: 20px; }
   #contact-detail .contact h3, #contact-detail .row-one p { display: block; margin-right: 0; }
-  #contact-detail .contact h3 br, #contact-detail .row-one p br { display: block; }
-  #contact-detail .contact p { line-height: 24px; }
+  #contact-detail .row-one p br { display: inline-block; }
+  #contact-detail .contact p { line-height: 20px; display: inline-block;  vertical-align: top; }
+	#contact-detail .contact p.address.first{ margin-right: 4px;}
+  #contact-detail .contact p:not(.address){ border-left: 1px solid #555555; margin-left: 7px; padding-left: 5px; }
+
   #copyright { padding: 35px 0; }
   .inner-header{background-size: cover !important;}
   .inner-header .inner-header-wrap { width: auto; }
@@ -2487,8 +2508,8 @@ h4 { font: bold 18px/23px "proxima_nova", sans-serif; }
   main.team ul li div.mobile-bio p { font: 300 14px/24px "proxima_nova", sans-serif; color: #9d9d9d; text-align: left; margin: 10px 0; }
   main.team ul li div.info { display: block; position: relative; opacity: 1; background: none; }
   main.team ul li div.info a.social { display: block; position: absolute; right: 0; }
-  main.team ul li div.info h3 { font:20px/24px 'aleo', serif; color: #617914; opacity: 1; top: 0; text-align: left;  }
-  main.team ul li div.info h3 small { font: 500 16px/20px "proxima_nova", serif; margin: 6px 0 11px; color: #595959;}
+  main.team ul li div.info h3 { font:20px/24px 'aleo', serif; color: #617914; opacity: 1; top: 0; text-align: left;-webkit-transform: none; -moz-transform: none; -ms-transform: none;  transform: none; top: auto;}
+  main.team ul li div.info h3 small { font: 500 16px/20px "proxima_nova", serif; margin: 6px 0 11px; color: #595959; }
   section.full-bio { display: none !important; }
   #tabs ul li a { padding: 10px; font: normal 22px/24px "aleo", serif; }
   #tabs section.tab-content article img { margin: 0 auto 30px; display: block; }
@@ -2713,21 +2734,25 @@ h4 { font: bold 18px/23px "proxima_nova", sans-serif; }
 }
 
 
-
-}
-/*768*/
-@media screen and (max-width: 742px) { .header-col-two { width: 100%; }
-  
-  #slider li { min-height: auto; height: auto; }
+  #slider li { min-height: auto; height: auto; background: rgba(91, 113, 21, 1);}
   #slider p { font-size: 11px; }
   #slider .banner-pager{left: auto; position: static; padding: 30px;}
   #slider .banner-content{padding: 0;text-align: left; background: rgba(91, 113, 21, 1);}
   #slider .banner-inner{position: static; left: auto; bottom: auto;padding: 30px;background: rgba(91, 113, 21, 1);}
   #slider .banner-content .container{bottom: auto;}
   #home-row-one .content { width: 60%; }
-  #home-row-one .hm-carousel { width: 40%; } }
+  #home-row-one .hm-carousel { width: 40%; }
+  .what-we-do{margin: 0 auto 0;}
+}
 
-/*516*/
+
+
+
+@media screen and (max-width: 553px) {
+	#contact-detail .contact p{display: block; ;}
+#contact-detail .contact p:not(.address){border-left: none;margin-left: 0;    padding-left: 0}
+}
+
 @media screen and (max-width: 516px) { main.team { width: auto; padding: 0 20px; height: auto; overflow: auto; }
 main.team ul li { width: auto; height: 100%; display: block; border-bottom: 1px solid #cccccc; padding: 0 0  20px; }
 main.team ul li img { margin: 0 0 20px; }
@@ -2768,10 +2793,43 @@ main.blog ul li { width: auto; display: block; float: none !important; }
 main.blog ul li img { width: 100%; height: auto; } 
 section.by-numbers ul li{display: block; margin: 0 auto 14px; padding: 0 0 23px 0; width: 90%; border-bottom: 1px solid rgba(255,255,255,.24); text-align: center;;}
 section.by-numbers ul li:nth-last-child(2){border-bottom: 1px solid rgba(255,255,255,.24); }
-
+section.main .location-column{width: 100%; margin: 0 2% 0 0; display: block; float: none;}
 	
 }
-/*480*/
+/*JS*/
+/* CSS Styles that are needed by jScrollPane for it to operate correctly.  Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane may not operate correctly without them. */
+.jspContainer { overflow: hidden; position: relative; }
+
+.jspPane { position: absolute; }
+
+.jspVerticalBar { position: absolute; top: 0; right: 0; width: 10px; height: 100%; background: rgba(0, 0, 0, 0.1); }
+
+.jspHorizontalBar { position: absolute; bottom: 0; left: 0; width: 100%; height: 16px; }
+
+.jspCap { display: none; }
+
+.jspHorizontalBar .jspCap { float: left; }
+
+.jspTrack { position: relative; }
+
+.jspDrag { background: rgba(188, 179, 168, 0.5); position: relative; top: 0; left: 0; cursor: pointer; }
+
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag { float: left; height: 100%; }
+
+.jspArrow { background: #50506d; text-indent: -20000px; display: block; cursor: pointer; padding: 0; margin: 0; }
+
+.jspArrow.jspDisabled { cursor: default; background: #80808d; }
+
+.jspVerticalBar .jspArrow { height: 16px; }
+
+.jspHorizontalBar .jspArrow { width: 16px; float: left; height: 100%; }
+
+.jspVerticalBar .jspArrow:focus { outline: none; }
+
+.jspCorner { background: #eeeef4; float: left; height: 100%; }
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner { margin: 0 -3px 0 0; }
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT

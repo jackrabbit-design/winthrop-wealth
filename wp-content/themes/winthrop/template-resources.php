@@ -17,14 +17,22 @@
 				//image
 				$img = get_sub_field('icon');
 			?>
-			    <li>
-			    	<img src="<?php echo $img['sizes']['resource-icon']; ?>" alt="<?php echo $img['alt']; ?>"/>
+			    <li><?php if(get_sub_field('riskbutton')){ ?>
+			    	<a href="https://pro.riskalyze.com/embed/b5fffa4bb6a6a6ec73f0" <?php if(get_sub_field('new_tab')) { echo 'target="_blank"'; } ?>>
+						<img src="<?php echo $img['sizes']['resource-icon']; ?>" alt="<?php echo $img['alt']; ?>"/>
+					</a>
+					<?php } else { ?> 
+
+			    	<a href="<?php echo $link; ?>" <?php if(get_sub_field('new_tab')) { echo 'target="_blank"'; } ?>>
+			    			<img src="<?php echo $img['sizes']['resource-icon']; ?>" alt="<?php echo $img['alt']; ?>"/>
+			    	</a>
+			    		<?php } ?>
 			    	<h4><?php echo $title; ?></h4>
 			    	<p><?php echo $content; ?></p>
 			    	<?php if(get_sub_field('riskbutton')){ ?>
 						<script src="https://riskalyze.com/hosted/b5fffa4bb6a6a6ec73f0/rq/It/sm/btn.js" type="text/javascript" data-logo="1" data-button-title="What's Your Risk Number?"></script>
 			    	<?php } else { ?> 
-			    	<a href="<?php echo $link; ?>" <?php if(get_sub_field('new_tab')) { echo 'target="_blank"'; } ?>class="link white">Learn More</a>
+			    	<a href="<?php echo $link; ?>" <?php if(get_sub_field('new_tab')) { echo 'target="_blank"'; } ?> class="link white">Learn More</a>
 			    	<?php } ?>
 			    </li>	    
 			    <?php endwhile; ?>

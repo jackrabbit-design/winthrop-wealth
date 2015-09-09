@@ -1,5 +1,5 @@
 <?php get_header(); the_post(); ?>
-   <main class="search">
+   <main class="search ">
 <?php $di = get_field('default_interior_banner','option'); ?> 
 <div class="inner-header" style="background: url(<?php echo $di['sizes']['inner-banner']; ?>) no-repeat center center;">
 
@@ -12,7 +12,7 @@
     </div>
 
 
-<section class="search-page clearfix">
+<section class="search-page clearfix main">
 <div class="results">
 	<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 	<?php 

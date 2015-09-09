@@ -38,7 +38,7 @@
 		</div>
 
 		<div class="content">
-			<h3>We are Problem Solver</h3>
+			<h3>We are Problem Solvers</h3>
 			<p>We help our clients lead happier lives by empowering them to become knowledgeable and active stewards of their financial resources. We remove a lot of the complexity that is associated with the ﬁnancial world. We keep it simple and focus on long-term results and solutions.</p>
 		</div> 
 	</div>
@@ -74,7 +74,7 @@
 
 <section class="how-did">
 	<div class="wrapper">
-		<small>How did Winthrop come about?</small>
+		<small>How did Winthrop Wealth come about?</small>
 		
 		<div id="how-slider">
 			<div>
@@ -215,13 +215,13 @@
 
 <section class="we-are-always">
 	<div class="wrapper">
-		<small>GROWTH & evolution</small>
+		<small>GROWTH &amp; evolution</small>
 		<h2>We Are Always Improving</h2>
 	</div>
 	<div class="row first">
 		<div class="wrapper">
 			<div class="parallax-window">
-				<img src="<?php bloginfo('url'); ?>/ui/images/smart-growth.png" width="447" height="307" data-stellar-ratio="1.25" data-stellar-vertical-offset="30"  /> <!-- data-stellar-horizontal-offset="75" data-stellar-vertical-offset="-20"  -->
+				<img src="<?php bloginfo('url'); ?>/ui/images/smart-growth.png" width="447" height="307" data-stellar-ratio="1.25" data-stellar-vertical-offset="100"  /> <!-- data-stellar-horizontal-offset="75" data-stellar-vertical-offset="-20"  -->
 			</div>
 			<div class="content">
 				<h3>Smart Growth</h3>
@@ -233,7 +233,7 @@
 	<div class="row even">
 		<div class="wrapper">
 		<div class="parallax-window">
-			<img src="<?php bloginfo('url'); ?>/ui/images/tech-forward.png" width="653" height="603"  data-stellar-ratio="1.25" data-stellar-vertical-offset="30"    />   <!-- data-stellar-horizontal-offset="75" data-stellar-vertical-offset="0"  -->
+			<img src="<?php bloginfo('url'); ?>/ui/images/tech-forward.png" width="653" height="603"  data-stellar-ratio="1.25" data-stellar-vertical-offset="100"    />   <!-- data-stellar-horizontal-offset="75" data-stellar-vertical-offset="0"  -->
 		</div>
 			<div class="content">
 				<h3>Tech-Forward</h3>
@@ -244,7 +244,7 @@
 	<div class="row">
 		<div class="wrapper">
 		<div class="parallax-window">
-			<img src="<?php bloginfo('url'); ?>/ui/images/family-friendly.png" width="312" height="252"  data-stellar-ratio="1.25" data-stellar-vertical-offset="60"   />   <!-- data-stellar-horizontal-offset="75" data-stellar-vertical-offset="10"  -->
+			<img src="<?php bloginfo('url'); ?>/ui/images/family-friendly.png" width="312" height="252"  data-stellar-ratio="1.25" data-stellar-vertical-offset="300"   />   <!-- data-stellar-horizontal-offset="75" data-stellar-vertical-offset="10"  -->
 		</div>
 			<div class="content">
 				<h3>Family Friendly</h3>

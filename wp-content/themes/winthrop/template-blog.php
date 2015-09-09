@@ -44,7 +44,7 @@
 		    <?php $img_id = get_post_thumbnail_id($post->ID); 
 						$image = wp_get_attachment_image_src($img_id, 'blog-size');
 						$alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
-		    	<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>"/>
+		    	<a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>"/></a>
 		    	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 		    	<?php the_category(', '); ?> | <time><?php echo get_the_date('F j');  echo'th, '; echo get_the_date('Y'); ?></time>
 			    <p><?php $ec = get_the_excerpt(); $trimEx = wp_trim_words($ec, 17); echo $trimEx; ?></p>

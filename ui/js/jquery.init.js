@@ -52,9 +52,10 @@ jQuery(function($) {
 	$('#homeSlider').cycle({
 		slides: '> li',
 		fx: 'fade',
-		timeout: 0,
+		timeout: 12000,
 		pager: '.banner-pager',
 		autoHeight: 'container',
+		pauseOnHover: true,
 		swipe: true,
 		pagerTemplate: '<span></span>'
 	}).on('cycle-after', function(event,opts){
@@ -62,7 +63,9 @@ jQuery(function($) {
 		$('.cycle-slide.cycle-slide-active').addClass('active')
 	});
 	
-
+	if ($('.we-are .box img').isOnScreen() === true){
+		$('.we-are .box').addClass('go');
+	} else {}
 	// $('.blog-filter ul li a').on('click', function(e){
 	// 	e.preventDefault();
 	// 	var $content = $('.query-results');
@@ -114,8 +117,8 @@ $(document).scroll(function() {
         // });
 
         // if transform3d isn't available, use top over background-position
-      	 if ($(window).width() > 768) {
-      		$('.inner-header').css('background-position-y', -Math.ceil(n/4) + 'px');
+      	 if ($(window).width() > 980) {
+      		$('.inner-header').css('background-position-y', -Math.ceil(n/6) + 'px');
    		 }
         //$('.banner-img').css('background-position-y', -Math.ceil(n/6) + 'px');
 });
@@ -188,8 +191,12 @@ $(window).resize(function() {
 		$('.header-col-two').removeAttr("style");
 		$("#main-nav").removeAttr("style");
 		$("#main-nav > ul > li > ul").removeAttr("style");
+		
 	}
 	//_sliderHeight();
+	$('#toggle_menu_btn.active').removeClass('active');
+	$('.header-col-two').removeClass('opened');
+	// /$('.header-col-two').slideUp();
 	$('.team .full-bio').removeClass('open');
 	$('.team > ul > li').removeClass('open');
 });
@@ -267,33 +274,51 @@ function _teamDesktop() {
 
 	$('.team > ul > li').click(function() {
 		var url = $(this).attr('data-url');
-		bio = $('.team .full-bio');
-		$(this).children('.mobile-bio').slideToggle();
-		if ($(this).hasClass('open')) {
-			$(this).removeClass('open');
+		console.log(url);
+		if ($(url).hasClass('open')) {
+			$(url).removeClass('open');
+			$(this).children('.mobile-bio').slideToggle();	
 		} else {
-			$(this).removeClass('open');
-			$(this).addClass('open');
-			//$('.loading').css('display', 'block');
-
-			 $('html, body').animate({
-        		scrollTop: $("#team-bio").offset().top
-    		}, 2000);
-
-			$('.full-bio').load('team-member/' + url + '/ #info', function() {
-				$(this).hide();
-				$(this).fadeIn(200);
-				//$('.loading').css('display', 'none');
-				//$('.biography').jScrollPane();
-				$('button.close-bio').click(function() {
-					$(this).parent().parent('.full-bio').removeClass('open');
+			$('.biography').jScrollPane();
+			$(this).children('.mobile-bio').slideToggle();
+	 		$('html, body').animate({ scrollTop: $('.inner-header').offset().top }, 500);
+	 		$('.full-bio').removeClass('open');
+	 		$(url).addClass('open');
+	 		$('button.close-bio').click(function() {
+					$(this).parent('.full-bio').removeClass('open');
 					$('.team  ul  li').removeClass('open');
-					$(this).parent().parent().fadeOut(200);
-					$(this).parent().parent().hide();
+					//$(this).parent().parent().fadeOut(200);
+					
 				});
-			});
-			bio.addClass('open');
 		}
+		// var url = $(this).attr('data-url');
+		// bio = $('.team .full-bio');
+		// $(this).children('.mobile-bio').slideToggle();
+		// if ($(this).hasClass('open')) {
+		// 	$(this).removeClass('open');
+		// } else {
+		// 	$(this).removeClass('open');
+		// 	$(this).addClass('open');
+		// 	$('.loading').toggleClass('now');
+
+		// 	 $('html, body').animate({
+  //       		scrollTop: $("#team-bio").offset().top
+  //   		}, 2000);
+
+		// 	$('.full-bio').load('team-member/' + url + '/ #info', function() {
+		// 		$(this).hide();
+		// 		$(this).fadeIn(200);
+		// 		$('.loading').toggleClass('now');
+		// 		$('.biography').jScrollPane();
+				// $('button.close-bio').click(function() {
+				// 	$(this).parent().parent('.full-bio').removeClass('open');
+				// 	$('.team  ul  li').removeClass('open');
+				// 	$(this).parent().parent().fadeOut(200);
+				// 	$(this).parent().parent().hide();
+				// });
+		// 	});
+		// 	bio.addClass('open');
+		// }
 	});
 	$('button.close-bio').click(function() {
 		$(this).parent().parent('.full-bio').removeClass('open');
@@ -355,7 +380,7 @@ function landingTabs() {
 	});
 }
 	
-	$.fn.isOnScreen = function() {
+$.fn.isOnScreen = function() {
 	var win = $(window);
 	var viewport = {
 		top: win.scrollTop()

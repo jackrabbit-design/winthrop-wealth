@@ -100,7 +100,7 @@
 				
 				
 			</div>
-			<a href="<?php echo get_permalink(76); ?>" class="btn green">Work with us</a>
+			<a href="<?php echo get_permalink(76); ?>" class="btn">Work with us</a>
 		</div>
 	</section>
 	
@@ -154,7 +154,7 @@
 						$image = wp_get_attachment_image_src($img_id, 'home-blog-large');
 						$imageMob = wp_get_attachment_image_src($img_id, 'home-blog-mobile');
 						$alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
-				<div class="blog-photo" style="background: url('<?php echo $image[0]; ?>'); ">
+				<div class="blog-photo" style="background-image: url('<?php echo $image[0]; ?>'); ">
 					<img src='<?php echo $imageMob[0]; ?>' alt="<?php echo $alt_text; ?>"/>
 				</div>
 				<div class="blog-text">
@@ -198,7 +198,7 @@
 						?>
 
 
-						<div class="blog-photo" style="background: url('<?php echo $imaged['sizes']['home-blog-large']; ?>'); ">
+						<div class="blog-photo" style="background-image: url('<?php echo $imaged['sizes']['home-blog-large']; ?>'); ">
 					<img src='<?php echo $imaged['sizes']['home-blog-mobile']; ?>' />
 					<?php } ?>
 				</div>
@@ -236,7 +236,7 @@
 						$image = wp_get_attachment_image_src($img_id, 'home-blog-large');
 						$imageMob = wp_get_attachment_image_src($img_id, 'home-blog-mobile');
 						$alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
-				<div class="blog-photo" style="background: url('<?php echo $image[0]; ?>'); ">
+				<div class="blog-photo" style="background-image: url('<?php echo $image[0]; ?>'); ">
 					<img src='<?php echo $imageMob[0]; ?>' alt="<?php echo $alt_text; ?>"/>
 				</div>
 				<div class="blog-text">

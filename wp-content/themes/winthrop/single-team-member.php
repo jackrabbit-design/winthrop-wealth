@@ -21,7 +21,11 @@
 	           
 	                <?php if(get_field('linkedin')) { ?><a href="<?php the_field('linkedin'); ?>" class="social"><i class="social-linkedin"></i></a> <?php } ?>
 	                <h3><?php the_title(); ?></h3>
-	               <?php if(get_field('job_title')){ ?> <h4><?php the_field('job_title'); ?></h4> <?php } if(get_the_content()) { ?> <?php the_content(); ?><a href="mailto:<?php the_field('email'); ?>" class="btn green">Email <?php the_title(); ?></a>
+	               <?php if(get_field('job_title')){ ?> <h4><?php the_field('job_title'); ?></h4> <?php } if(get_the_content()) { ?> <?php the_content(); ?>
+
+	                <?php } ?>
+	                <?php if(get_field('email')) { ?>
+						<a href="mailto:<?php the_field('email'); ?>" class="btn green">Email <?php the_title(); ?></a>
 	                <?php } ?>
 	            </article>
 	            <?php $img = get_field('full_bio'); ?>
