@@ -9,7 +9,7 @@
 	    </section>
 	 	<div class="loading"></div>
 	 	<?php $c = 1; $cb = 1;
-			query_posts(array('post_type' => 'team-member', 'post_per_page' => -1)); 
+			query_posts(array('post_type' => 'team-member', 'posts_per_page' => -1)); 
 			if(have_posts()) :
 		?>
 			<?php while(have_posts()) : the_post(); ?>
