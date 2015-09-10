@@ -1,5 +1,6 @@
 <div class="side-wrapper clearfix">
         <aside>
+<?php if(!is_404()) { ?>
 <?php if(!get_field('hide_sub_nav')) { ?>
         <nav class="side">
         
@@ -15,7 +16,7 @@
 	<?php } ?> 
 
  </nav>
- <?php } ?>
+ <?php } } ?>
 	        <?php query_posts(array('post_type'=> 'post', 'posts_per_page' => 1)); $pcount = 1; if(have_posts()) : while(have_posts()) : the_post(); 
 					$terms = get_the_terms( $post->ID, 'category' );
 					if ( $terms && ! is_wp_error( $terms ) ) : 

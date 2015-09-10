@@ -40,7 +40,7 @@ $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
 	    </ul>
 	    
 	    <div class="loadmore">
-			<?php next_posts_link( 'Loan More' ); ?>
+			<?php next_posts_link( 'Load More' ); ?>
 		</div>
 		<?php else: ?>
 		

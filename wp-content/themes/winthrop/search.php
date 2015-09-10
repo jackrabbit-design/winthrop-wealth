@@ -1,6 +1,6 @@
 <?php get_header(); the_post(); ?>
    <main class="search ">
-<?php $di = get_field('default_interior_banner','option'); ?> 
+<?php $di = get_field('search_image','option'); ?> 
 <div class="inner-header" style="background: url(<?php echo $di['sizes']['inner-banner']; ?>) no-repeat center center;">
 
 	    <div class="inner-header-wrap">
